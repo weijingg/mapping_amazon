@@ -1,0 +1,14 @@
+---
+title: "MUSA 550: Final Project Template"
+subtitle: "An example website demonstrating the power of Quarto for sharing analyses on the web"
+---
+
+## Welcome!
+
+We can create beautiful websites that describe complex technical analyses in Python using Quarto and deploy them online using GitHub Pages. This combination of tools is a really powerful way to create and share your work. This website is a demo that is meant to be used to create your own Quarto website for the final project in MUSA 550.
+
+Quarto is a relatively new tool, but is becoming popular quickly. It’s a successor to the Rmarkdown ecosystem that combines functionality into a single tool and also extends its computation power to other languages. Most importantly for us, Quarto supports executing Python code, allowing us to convert Jupyter notebooks to HTML and share them online.
+
+::: {.callout-important}
+This template site, including the layout it uses, is just a suggested place to start! For your final project, you’re welcome (and encouraged) to make as many changes as you like to best fit your project.
+:::

@@ -1,0 +1,21 @@
+---
+title: "About Me"
+toc: false
+---
+
+<div style="display: flex; gap: 10px; align-items: flex-start;">
+
+<img src="images/Eric.png" alt="Eric Delmelle" style="width: 170px; border-radius: 10px;">
+
+<div>
+  <p><span style="color:red">Hello everyone</span></p>
+  <p>On this about page, you might want to add more information about yourself, the project, or course. </p>
+
+  - My name is *Eric* **Delmelle**, the instructor for the course. 
+  - You can find more information about me on my [personal website](https://www.design.upenn.edu/people/eric-delmelle).
+  - <span style="color:orange">This site is an example site showing how to use Quarto for the final project for MUSA 550, during fall 2024.</span>
+  - <span style="color:gray">Write something about you</span>
+    - <span style="color:red">or about something you like</span>
+</div>
+
+</div>
