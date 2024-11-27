@@ -4,7 +4,10 @@
     "href": "about.html",
     "title": "About Me",
     "section": "",
-    "text": "Hello everyone\n\n\nOn this about page, you might want to add more information about yourself, the project, or course.\n\n\nMy name is Eric Delmelle, the instructor for the course.\nYou can find more information about me on my personal website.\nThis site is an example site showing how to use Quarto for the final project for MUSA 550, during fall 2024.\nWrite something about you\n\nor about something you like"
+    "text": "Hi everyone!\n\n\nI’m Wei Jing 😊\n\n\nI am a Master’s student at UPenn, studying Urban Spatial Analytics.\nI’m from Singapore, where I did my undergrad in Earth Science.\nI’ve worked on hydrology research for 4 years.\nI love maps, rocks, and chocolates!",
+    "crumbs": [
+      "About Me"
+    ]
   },
   {
     "objectID": "analysis/4-folium.html",
@@ -32,7 +35,11 @@
     "href": "analysis/1-python-code-blocks.html",
     "title": "Python code blocks",
     "section": "",
-    "text": "This is an example from the Quarto documentation that shows how to mix executable Python code blocks into a markdown file in a “Quarto markdown” .qmd file.\nFor a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
+    "text": "This is an example from the Quarto documentation that shows how to mix executable Python code blocks into a markdown file in a “Quarto markdown” .qmd file.\nFor a demonstration of a line plot on a polar axis, see Figure 1.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis",
+    "crumbs": [
+      "Analysis",
+      "Python code blocks"
+    ]
   },
   {
     "objectID": "analysis/3-altair-hvplot.html",
@@ -60,34 +67,61 @@
     "href": "analysis/index.html",
     "title": "Analysis",
     "section": "",
-    "text": "Analysis\nThis section includes examples of technical analysis done using Jupyter notebooks. Each sub-section highlights different types of analyses and visualizations. In particular, it highlights that we can easily publish interactive visualizations produced with packages such as hvPlot, altair, or Folium, without losing any of the interactive features.\nOn this page, you might want to share more introductory or background information about the analyses to help guide the reader."
+    "text": "Analysis\nThis section includes examples of technical analysis done using Jupyter notebooks. Each sub-section highlights different types of analyses and visualizations. In particular, it highlights that we can easily publish interactive visualizations produced with packages such as hvPlot, altair, or Folium, without losing any of the interactive features.\nOn this page, you might want to share more introductory or background information about the analyses to help guide the reader.",
+    "crumbs": [
+      "Analysis"
+    ]
   },
   {
     "objectID": "analysis/2-static-images.html",
     "href": "analysis/2-static-images.html",
     "title": "Showing static visualizations",
     "section": "",
-    "text": "This page is generated from a Jupyter notebook and demonstrates how to generate static visualizations with matplotlib, pandas, and seaborn.\nStart by importing the packages we need:\nimport pandas as pd\nfrom matplotlib import pyplot as plt\nimport seaborn as sns\nLoad the “Palmer penguins” dataset from week 2:\n# Load data on Palmer penguins\npenguins = pd.read_csv(\"https://raw.githubusercontent.com/MUSA-550-Fall-2023/week-2/main/data/penguins.csv\")\n# Show the first ten rows\npenguins.head(n=10)    \n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\n0\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nmale\n2007\n\n\n1\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nfemale\n2007\n\n\n2\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nfemale\n2007\n\n\n3\nAdelie\nTorgersen\nNaN\nNaN\nNaN\nNaN\nNaN\n2007\n\n\n4\nAdelie\nTorgersen\n36.7\n19.3\n193.0\n3450.0\nfemale\n2007\n\n\n5\nAdelie\nTorgersen\n39.3\n20.6\n190.0\n3650.0\nmale\n2007\n\n\n6\nAdelie\nTorgersen\n38.9\n17.8\n181.0\n3625.0\nfemale\n2007\n\n\n7\nAdelie\nTorgersen\n39.2\n19.6\n195.0\n4675.0\nmale\n2007\n\n\n8\nAdelie\nTorgersen\n34.1\n18.1\n193.0\n3475.0\nNaN\n2007\n\n\n9\nAdelie\nTorgersen\n42.0\n20.2\n190.0\n4250.0\nNaN\n2007"
+    "text": "This page is generated from a Jupyter notebook and demonstrates how to generate static visualizations with matplotlib, pandas, and seaborn.\nStart by importing the packages we need:\nimport pandas as pd\nfrom matplotlib import pyplot as plt\nimport seaborn as sns\nLoad the “Palmer penguins” dataset from week 2:\n# Load data on Palmer penguins\npenguins = pd.read_csv(\"https://raw.githubusercontent.com/MUSA-550-Fall-2023/week-2/main/data/penguins.csv\")\n# Show the first ten rows\npenguins.head(n=10)    \n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\n0\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nmale\n2007\n\n\n1\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nfemale\n2007\n\n\n2\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nfemale\n2007\n\n\n3\nAdelie\nTorgersen\nNaN\nNaN\nNaN\nNaN\nNaN\n2007\n\n\n4\nAdelie\nTorgersen\n36.7\n19.3\n193.0\n3450.0\nfemale\n2007\n\n\n5\nAdelie\nTorgersen\n39.3\n20.6\n190.0\n3650.0\nmale\n2007\n\n\n6\nAdelie\nTorgersen\n38.9\n17.8\n181.0\n3625.0\nfemale\n2007\n\n\n7\nAdelie\nTorgersen\n39.2\n19.6\n195.0\n4675.0\nmale\n2007\n\n\n8\nAdelie\nTorgersen\n34.1\n18.1\n193.0\n3475.0\nNaN\n2007\n\n\n9\nAdelie\nTorgersen\n42.0\n20.2\n190.0\n4250.0\nNaN\n2007",
+    "crumbs": [
+      "Analysis",
+      "Showing static visualizations"
+    ]
   },
   {
     "objectID": "analysis/2-static-images.html#a-simple-visualization-3-different-ways",
     "href": "analysis/2-static-images.html#a-simple-visualization-3-different-ways",
     "title": "Showing static visualizations",
     "section": "A simple visualization, 3 different ways",
-    "text": "A simple visualization, 3 different ways\n\nI want to scatter flipper length vs. bill length, colored by the penguin species\n\n\nUsing matplotlib\n\n# Setup a dict to hold colors for each species\ncolor_map = {\"Adelie\": \"#1f77b4\", \"Gentoo\": \"#ff7f0e\", \"Chinstrap\": \"#D62728\"}\n\n# Initialize the figure \"fig\" and axes \"ax\"\nfig, ax = plt.subplots(figsize=(10, 6))\n\n# Group the data frame by species and loop over each group\n# NOTE: \"group\" will be the dataframe holding the data for \"species\"\nfor species, group_df in penguins.groupby(\"species\"):\n\n    # Plot flipper length vs bill length for this group\n    # Note: we are adding this plot to the existing \"ax\" object\n    ax.scatter(\n        group_df[\"flipper_length_mm\"],\n        group_df[\"bill_length_mm\"],\n        marker=\"o\",\n        label=species,\n        color=color_map[species],\n        alpha=0.75,\n        zorder=10\n    )\n\n# Plotting is done...format the axes!\n\n## Add a legend to the axes\nax.legend(loc=\"best\")\n\n## Add x-axis and y-axis labels\nax.set_xlabel(\"Flipper Length (mm)\")\nax.set_ylabel(\"Bill Length (mm)\")\n\n## Add the grid of lines\nax.grid(True);\n\n\n\n\n\n\nHow about in pandas?\nDataFrames have a built-in “plot” function that can make all of the basic type of matplotlib plots!\nFirst, we need to add a new “color” column specifying the color to use for each species type.\nUse the pd.replace() function: it use a dict to replace values in a DataFrame column.\n\n# Calculate a list of colors\ncolor_map = {\"Adelie\": \"#1f77b4\", \"Gentoo\": \"#ff7f0e\", \"Chinstrap\": \"#D62728\"}\n\n# Map species name to color \npenguins[\"color\"] = penguins[\"species\"].replace(color_map)\n\npenguins.head()\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\ncolor\n\n\n\n\n0\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nmale\n2007\n#1f77b4\n\n\n1\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nfemale\n2007\n#1f77b4\n\n\n2\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nfemale\n2007\n#1f77b4\n\n\n3\nAdelie\nTorgersen\nNaN\nNaN\nNaN\nNaN\nNaN\n2007\n#1f77b4\n\n\n4\nAdelie\nTorgersen\n36.7\n19.3\n193.0\n3450.0\nfemale\n2007\n#1f77b4\n\n\n\n\n\n\n\nNow plot!\n\n# Same as before: Start by initializing the figure and axes\nfig, myAxes = plt.subplots(figsize=(10, 6))\n\n# Scatter plot two columns, colored by third\n# Use the built-in pandas plot.scatter function\npenguins.plot.scatter(\n    x=\"flipper_length_mm\",\n    y=\"bill_length_mm\",\n    c=\"color\",\n    alpha=0.75,\n    ax=myAxes, # IMPORTANT: Make sure to plot on the axes object we created already!\n    zorder=10\n)\n\n# Format the axes finally\nmyAxes.set_xlabel(\"Flipper Length (mm)\")\nmyAxes.set_ylabel(\"Bill Length (mm)\")\nmyAxes.grid(True);\n\n\n\n\nNote: no easy way to get legend added to the plot in this case…\n\n\nSeaborn: statistical data visualization\nSeaborn is designed to plot two columns colored by a third column…\n\n# Initialize the figure and axes\nfig, ax = plt.subplots(figsize=(10, 6))\n\n# style keywords as dict\ncolor_map = {\"Adelie\": \"#1f77b4\", \"Gentoo\": \"#ff7f0e\", \"Chinstrap\": \"#D62728\"}\nstyle = dict(palette=color_map, s=60, edgecolor=\"none\", alpha=0.75, zorder=10)\n\n# use the scatterplot() function\nsns.scatterplot(\n    x=\"flipper_length_mm\",  # the x column\n    y=\"bill_length_mm\",  # the y column\n    hue=\"species\",  # the third dimension (color)\n    data=penguins,  # pass in the data\n    ax=ax,  # plot on the axes object we made\n    **style  # add our style keywords\n)\n\n# Format with matplotlib commands\nax.set_xlabel(\"Flipper Length (mm)\")\nax.set_ylabel(\"Bill Length (mm)\")\nax.grid(True)\nax.legend(loc=\"best\");"
+    "text": "A simple visualization, 3 different ways\n\nI want to scatter flipper length vs. bill length, colored by the penguin species\n\n\nUsing matplotlib\n\n# Setup a dict to hold colors for each species\ncolor_map = {\"Adelie\": \"#1f77b4\", \"Gentoo\": \"#ff7f0e\", \"Chinstrap\": \"#D62728\"}\n\n# Initialize the figure \"fig\" and axes \"ax\"\nfig, ax = plt.subplots(figsize=(10, 6))\n\n# Group the data frame by species and loop over each group\n# NOTE: \"group\" will be the dataframe holding the data for \"species\"\nfor species, group_df in penguins.groupby(\"species\"):\n\n    # Plot flipper length vs bill length for this group\n    # Note: we are adding this plot to the existing \"ax\" object\n    ax.scatter(\n        group_df[\"flipper_length_mm\"],\n        group_df[\"bill_length_mm\"],\n        marker=\"o\",\n        label=species,\n        color=color_map[species],\n        alpha=0.75,\n        zorder=10\n    )\n\n# Plotting is done...format the axes!\n\n## Add a legend to the axes\nax.legend(loc=\"best\")\n\n## Add x-axis and y-axis labels\nax.set_xlabel(\"Flipper Length (mm)\")\nax.set_ylabel(\"Bill Length (mm)\")\n\n## Add the grid of lines\nax.grid(True);\n\n\n\n\n\n\n\n\n\n\nHow about in pandas?\nDataFrames have a built-in “plot” function that can make all of the basic type of matplotlib plots!\nFirst, we need to add a new “color” column specifying the color to use for each species type.\nUse the pd.replace() function: it use a dict to replace values in a DataFrame column.\n\n# Calculate a list of colors\ncolor_map = {\"Adelie\": \"#1f77b4\", \"Gentoo\": \"#ff7f0e\", \"Chinstrap\": \"#D62728\"}\n\n# Map species name to color \npenguins[\"color\"] = penguins[\"species\"].replace(color_map)\n\npenguins.head()\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\ncolor\n\n\n\n\n0\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nmale\n2007\n#1f77b4\n\n\n1\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nfemale\n2007\n#1f77b4\n\n\n2\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nfemale\n2007\n#1f77b4\n\n\n3\nAdelie\nTorgersen\nNaN\nNaN\nNaN\nNaN\nNaN\n2007\n#1f77b4\n\n\n4\nAdelie\nTorgersen\n36.7\n19.3\n193.0\n3450.0\nfemale\n2007\n#1f77b4\n\n\n\n\n\n\n\nNow plot!\n\n# Same as before: Start by initializing the figure and axes\nfig, myAxes = plt.subplots(figsize=(10, 6))\n\n# Scatter plot two columns, colored by third\n# Use the built-in pandas plot.scatter function\npenguins.plot.scatter(\n    x=\"flipper_length_mm\",\n    y=\"bill_length_mm\",\n    c=\"color\",\n    alpha=0.75,\n    ax=myAxes, # IMPORTANT: Make sure to plot on the axes object we created already!\n    zorder=10\n)\n\n# Format the axes finally\nmyAxes.set_xlabel(\"Flipper Length (mm)\")\nmyAxes.set_ylabel(\"Bill Length (mm)\")\nmyAxes.grid(True);\n\n\n\n\n\n\n\n\nNote: no easy way to get legend added to the plot in this case…\n\n\nSeaborn: statistical data visualization\nSeaborn is designed to plot two columns colored by a third column…\n\n# Initialize the figure and axes\nfig, ax = plt.subplots(figsize=(10, 6))\n\n# style keywords as dict\ncolor_map = {\"Adelie\": \"#1f77b4\", \"Gentoo\": \"#ff7f0e\", \"Chinstrap\": \"#D62728\"}\nstyle = dict(palette=color_map, s=60, edgecolor=\"none\", alpha=0.75, zorder=10)\n\n# use the scatterplot() function\nsns.scatterplot(\n    x=\"flipper_length_mm\",  # the x column\n    y=\"bill_length_mm\",  # the y column\n    hue=\"species\",  # the third dimension (color)\n    data=penguins,  # pass in the data\n    ax=ax,  # plot on the axes object we made\n    **style  # add our style keywords\n)\n\n# Format with matplotlib commands\nax.set_xlabel(\"Flipper Length (mm)\")\nax.set_ylabel(\"Bill Length (mm)\")\nax.grid(True)\nax.legend(loc=\"best\");",
+    "crumbs": [
+      "Analysis",
+      "Showing static visualizations"
+    ]
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "MUSA 550: Final Project Template",
+    "title": "Mapping the Amazon River",
     "section": "",
-    "text": "We can create beautiful websites that describe complex technical analyses in Python using Quarto and deploy them online using GitHub Pages. This combination of tools is a really powerful way to create and share your work. This website is a demo that is meant to be used to create your own Quarto website for the final project in MUSA 550.\nQuarto is a relatively new tool, but is becoming popular quickly. It’s a successor to the Rmarkdown ecosystem that combines functionality into a single tool and also extends its computation power to other languages. Most importantly for us, Quarto supports executing Python code, allowing us to convert Jupyter notebooks to HTML and share them online.\n\n\n\n\n\n\nImportant\n\n\n\nThis template site, including the layout it uses, is just a suggested place to start! For your final project, you’re welcome (and encouraged) to make as many changes as you like to best fit your project."
+    "text": "The Amazon is the largest river in the world by discharge.\nThe depth of 12 lakes along the Amazon River were mapped using a new method involving remote sensing and field surveys, with darker areas representing deeper waters. Depth data is useful for research in ecology and hydrology, such as in determining species distribution.\n\n\n\n\n\n\nMood today\n\n\n\nI am hungry but I received a biscuit!",
+    "crumbs": [
+      "Welcome"
+    ]
   },
   {
     "objectID": "index.html#welcome",
     "href": "index.html#welcome",
-    "title": "MUSA 550: Final Project Template",
+    "title": "Mapping the Amazon River",
     "section": "",
-    "text": "We can create beautiful websites that describe complex technical analyses in Python using Quarto and deploy them online using GitHub Pages. This combination of tools is a really powerful way to create and share your work. This website is a demo that is meant to be used to create your own Quarto website for the final project in MUSA 550.\nQuarto is a relatively new tool, but is becoming popular quickly. It’s a successor to the Rmarkdown ecosystem that combines functionality into a single tool and also extends its computation power to other languages. Most importantly for us, Quarto supports executing Python code, allowing us to convert Jupyter notebooks to HTML and share them online.\n\n\n\n\n\n\nImportant\n\n\n\nThis template site, including the layout it uses, is just a suggested place to start! For your final project, you’re welcome (and encouraged) to make as many changes as you like to best fit your project."
+    "text": "The Amazon is the largest river in the world by discharge.\nThe depth of 12 lakes along the Amazon River were mapped using a new method involving remote sensing and field surveys, with darker areas representing deeper waters. Depth data is useful for research in ecology and hydrology, such as in determining species distribution.\n\n\n\n\n\n\nMood today\n\n\n\nI am hungry but I received a biscuit!",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "Mapping the Amazon River",
+    "section": "",
+    "text": "The Amazon is the largest river in the world by discharge.\nThe depth of 12 lakes along the Amazon River were mapped using a new method involving remote sensing and field surveys, with darker areas representing deeper waters. Depth data is useful for research in ecology and hydrology, such as in determining species distribution.\n\n\n\n\n\n\nMood today\n\n\n\nI am hungry but I received a biscuit!",
+    "crumbs": [
+      "Introduction"
+    ]
   }
 ]

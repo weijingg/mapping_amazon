@@ -1,0 +1,21 @@
+---
+title: "About Me"
+toc: false
+---
+
+<div style="display: flex; gap: 10px; align-items: flex-start;">
+
+<img src="images/wj.jpg" alt="Wei Jing Ang" style="width: 170px; border-radius: 10px;">
+
+<div>
+  <p>**Hi everyone!**</p>
+  <p>I'm Wei Jing 😊</p>
+
+  - I am a Master's student at UPenn, studying Urban Spatial Analytics.
+  - I'm from Singapore, where I did my undergrad in Earth Science.
+  - I've worked on hydrology research for 4 years.
+  - I love maps, rocks, and chocolates!
+  
+</div>
+
+</div>

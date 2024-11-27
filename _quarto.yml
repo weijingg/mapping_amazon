@@ -5,25 +5,25 @@ project:
     port: 3333
 
 website:
-  title: "MUSA 550"
+  title: "MUSA 550 Final Project"
   page-footer:
-    left: "delmelle@gmail.com"
+    left: "MUSA 550 Final Project"
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
 
   sidebar:
-    logo: "images/course-icon.png"
+    logo: "images/icon.png"
     pinned: true
     align: center
     tools:
       - icon: globe
-        href: https://www.design.upenn.edu/people/eric-delmelle
-        text: "Personal Website"
+        href: https://scholar.google.com/citations?user=uX6hQK4AAAAJ&hl=en&authuser=1&oi=ao
+        text: "Google Scholar"
+      - icon: linkedin
+        href: https://www.linkedin.com/in/wei-jing-ang/
+        text: "LinkedIn"
       - icon: github
-        href: https://github.com/MUSA-550-Fall-2024/
-        text: "MUSA 550 GitHub"
-      - icon: twitter
-        href: https://twitter.com/ericdelmelle
-        text: "Eric Delmelle Twitter"
+        href: https://github.com/weijingg
+        text: "GitHub"
     style: "docked"
     search: true
     collapse-level: 2

@@ -1,0 +1,48 @@
+project:
+  type: website
+  output-dir: docs
+  preview:
+    port: 3333
+
+website:
+  title: "MUSA 550 Final Project"
+  page-footer:
+    left: "MUSA 550 Final Project"
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+
+  sidebar:
+    logo: "images/icon.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: globe
+        href: https://scholar.google.com/citations?user=uX6hQK4AAAAJ&hl=en&authuser=1&oi=ao
+        text: "Google Scholar"
+      - icon: linkedin
+        href: https://www.linkedin.com/in/wei-jing-ang/
+        text: "LinkedIn"
+      - icon: github
+        href: https://github.com/weijingg
+        text: "GitHub"
+    style: "docked"
+    search: true
+    collapse-level: 2
+    contents:
+      - href: index.qmd
+        text: Welcome
+      - about.qmd
+      - section: analysis/index.qmd
+        contents:
+          - analysis/1-python-code-blocks.qmd 
+          - analysis/2-static-images.ipynb
+          - analysis/3-altair-hvplot.ipynb
+          - analysis/4-folium.ipynb
+
+format:
+  html:
+    highlight-style: solarized
+    theme: cosmo
+    css: styles.css
+    code-copy: true
+    code-overflow: wrap
+    toc: true
