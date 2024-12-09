@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-054b4dac1a392494bc2b80d423da1e9d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a8135bde724a2473f0b397d77a36c59e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a80a90e37dcd0795c9c195f928fd8e23.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -97,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
       <img src="../images/icon.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
-    <a href="https://scholar.google.com/citations?user=uX6hQK4AAAAJ&amp;hl=en&amp;authuser=1&amp;oi=ao" title="Google Scholar" class="quarto-navigation-tool px-1" aria-label="Google Scholar"><i class="bi bi-globe"></i></a>
+    <a href="https://scholar.google.com/citations?user=uX6hQK4AAAAJ&amp;hl=en&amp;authuser=1&amp;oi=ao" title="Google Scholar" class="quarto-navigation-tool px-1" aria-label="Google Scholar"><i class="bi bi-mortarboard-fill"></i></a>
     <a href="https://www.linkedin.com/in/wei-jing-ang/" title="LinkedIn" class="quarto-navigation-tool px-1" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
     <a href="https://github.com/weijingg" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
 </div>
@@ -112,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Welcome</span></a>
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -132,26 +132,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../analysis/1-python-code-blocks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Python code blocks</span></a>
+  <a href="../analysis/1-IF.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Inundation frequency</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../analysis/2-static-images.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Showing static visualizations</span></a>
+  <a href="../analysis/2-Wetland.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wetland Extent</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../analysis/3-altair-hvplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Altair and Hvplot Charts</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../analysis/4-folium.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Interactive Maps with Folium</span></a>
+  <a href="../analysis/3-Bathymetry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bathymetry</span></a>
   </div>
 </li>
       </ul>
@@ -178,8 +172,12 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="analysis" class="level1">
 <h1>Analysis</h1>
-<p>This section includes examples of technical analysis done using Jupyter notebooks. Each sub-section highlights different types of analyses and visualizations. In particular, it highlights that we can easily publish interactive visualizations produced with packages such as hvPlot, altair, or Folium, without losing any of the interactive features.</p>
-<p>On this page, you might want to share more introductory or background information about the analyses to help guide the reader.</p>
+<p>Current methods on measuring depth (bathymetry) includes surveys that use an echo sounder attached to a boat. However, such surveys require much time, money, and manpower, hence are usually restricted to a small scale. To determine bathymetry on a larger scale, remote sensing is adopted, but many techniques are based on how light reflects off the water surface, which is less accurate when measuring cloudy water bodies like the Amazon lakes.</p>
+<p>Considering the limitations of both methods, this project uses a new method involving flooding/ inundation frequency (IF), in other words, how often a certain part of a floodplain is flooded. As deeper parts of the floodplain would be flooded more, an IF-depth model can be used. This model is based on one of the floodplains called Curuai, which has been surveyed by a team of researchers, and is applied to the rest of the study area.</p>
+<p><br></p>
+<p align="center">
+<img src="../images/flowchart.png" alt="Flowchart" style="width: 500px;">
+</p>
 
 
 </section>
@@ -609,7 +607,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>MUSA 550 Final Project</p>
+<p>Wei Jing Ang, 2024</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

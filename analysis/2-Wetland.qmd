@@ -1,0 +1,45 @@
+---
+title: "Wetland Extent"
+format:
+  html:
+    code-fold: true
+---
+
+Wetland extent was obtained from the Oakland Ridge National Laboratory Distributed Active Archive Centre (Hess et al., 2015).
+The raster was cropped to the floodplain along the Amazon River and resampled to the inundation frequency raster's resolution. 
+
+```{python}
+#| label: fig-wetland
+#| fig-cap: "Wetland extent"
+
+import numpy as np
+import matplotlib.pyplot as plt
+import rasterio as rio
+
+# Import wetland extent
+wetland = rio.open("../data/wetland_nearest.tif")
+
+# Read into a NumPy array (only 1 band)
+wetland_np = wetland.read(1)
+
+# Plot
+fig, ax = plt.subplots(figsize=(10, 4))
+img = ax.imshow(wetland_np)
+
+# Set background to beige
+fig.patch.set_facecolor("#F9F8F2")
+ax.set_facecolor("#F9F8F2")
+
+# Create an inset axes for the colorbar in the bottom right
+cax = ax.inset_axes([0.8, 0.15, 0.15, 0.03])  # [x, y, width, height]
+
+# Colorbar
+cbar = fig.colorbar(img, cax=cax, orientation='horizontal', shrink=0.3)
+cbar.ax.set_title("Wetland extent", fontsize=10, pad=4, color='white') # title
+cbar.outline.set_linewidth(0)                                  # remove black outline
+cbar.ax.tick_params(size=0)                                    # remove ticks
+cbar.ax.xaxis.set_tick_params(pad=4, colors='white')           # tick labels
+
+# Remove axes for clean aesthetics
+ax.axis("off")
+```

@@ -1,0 +1,65 @@
+/*-- scss:defaults --*/
+
+$theme: "sandstone" !default;
+
+// Color system
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #f8f5f0 !default;
+$gray-300: #dfd7ca !default;
+$gray-400: #ced4da !default;
+$gray-500: #98978b !default;
+$gray-600: #8e8c84 !default;
+$gray-700: #495057 !default;
+$gray-800: #3e3f3a !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$red: #bf2642 !default;
+$orange: #f2a03d !default;
+$green: #02733e !default;
+$purple: #73245e !default;
+$beige: #F9F8F2 !default;
+$blue: #00817c !default;
+$indigo:  #6610f2 !default;
+$pink:    #e83e8c !default;
+$yellow:  #ffc107 !default;
+$teal:    #20c997 !default;
+$cyan:    #29abe0 !default;
+$coral: #E6A1A8 !default;
+$grey: #F2F2EC !default;
+
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $coral !default;
+$info:          $cyan !default;
+$warning:       $orange !default;
+$danger:        $red !default;
+$light:         $beige !default;
+$dark:          $gray-800 !default;
+
+// Body
+
+$body-color:                $gray-800 !default;
+$body-bg:                   $light !default;
+
+// Links
+
+$link-color:                $success !default;
+
+// Sidebar
+
+$sidebar-bg:    $grey !default;
+
+// Pfp
+
+#Profile { /* Target pfp */
+    max-width: 95%;
+    margin-top: 10px;
+}
+
+// Figure 1
+.quarto-figure figcaption {
+    text-align: center;
+}

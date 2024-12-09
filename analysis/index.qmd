@@ -1,11 +1,17 @@
 # Analysis 
 
-This section includes examples of technical analysis done using Jupyter notebooks.
-Each sub-section highlights different types of analyses and visualizations.
-In particular, it highlights that we can easily publish interactive visualizations
-produced with packages such as hvPlot, altair, or Folium, without losing
-any of the interactive features. 
+Current methods on measuring depth (bathymetry) includes surveys that use an echo sounder attached to a boat. 
+However, such surveys require much time, money, and manpower, hence are usually restricted to a small scale. 
+To determine bathymetry on a larger scale, remote sensing is adopted, but many techniques are based on how light 
+reflects off the water surface, which is less accurate when measuring cloudy water bodies like the Amazon lakes. 
 
-On this page, you might want to share more introductory or background information about 
-the analyses to help guide the reader. 
+Considering the limitations of both methods, this project uses a new method involving flooding/ inundation frequency (IF), 
+in other words, how often a certain part of a floodplain is flooded. As deeper parts of the floodplain would be 
+flooded more, an IF-depth model can be used. This model is based on one of the floodplains called Curuai, 
+which has been surveyed by a team of researchers, and is applied to the rest of the study area. 
 
+</br>
+
+<p align="center">
+    <img src="/images/flowchart.png" alt="Flowchart" style="width: 500px;">
+</p>

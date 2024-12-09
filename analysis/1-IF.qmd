@@ -1,0 +1,45 @@
+---
+title: "Inundation frequency"
+format:
+  html:
+    code-fold: true
+---
+
+Inundation frequency was obtained from the Global Surface Water Explorer Portal (Pekel et al., 2016). 
+The water occurence tiles of 60W and 70W were merged and cropped to along the Amazon River.
+
+```{python}
+#| label: fig-if
+#| fig-cap: "Inundation frequency"
+
+import numpy as np
+import matplotlib.pyplot as plt
+import rasterio as rio
+
+# Import IF cropped
+IF_crop = rio.open("../data/IF_crop.tif")
+
+# Read into a NumPy array (only 1 band)
+IF_crop_np = IF_crop.read(1)
+
+# Plot
+fig, ax = plt.subplots(figsize=(10, 4))
+img = ax.imshow(IF_crop_np)
+
+# Set background to beige
+fig.patch.set_facecolor("#F9F8F2")
+ax.set_facecolor("#F9F8F2")
+
+# Create an inset axes for the colorbar in the bottom right
+cax = ax.inset_axes([0.8, 0.15, 0.15, 0.03])  # [x, y, width, height]
+
+# Colorbar
+cbar = fig.colorbar(img, cax=cax, orientation='horizontal', shrink=0.3)
+cbar.ax.set_title("IF (%)", fontsize=10, pad=4, color='white') # title
+cbar.outline.set_linewidth(0)                                  # remove black outline
+cbar.ax.tick_params(size=0)                                    # remove ticks
+cbar.ax.xaxis.set_tick_params(pad=4, colors='white')           # tick labels
+
+# Remove axes for clean aesthetics
+ax.axis("off")
+```

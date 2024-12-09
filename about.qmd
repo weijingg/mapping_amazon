@@ -1,21 +1,31 @@
 ---
-title: "About Me"
 toc: false
 ---
 
-<div style="display: flex; gap: 10px; align-items: flex-start;">
+::: {.grid}
 
-<img src="images/wj.jpg" alt="Wei Jing Ang" style="width: 170px; border-radius: 10px;">
+::: {.g-col-7} 
+# About Me
 
-<div>
-  <p>**Hi everyone!**</p>
-  <p>I'm Wei Jing 😊</p>
+## Hi, I'm Wei Jing!
 
-  - I am a Master's student at UPenn, studying Urban Spatial Analytics.
-  - I'm from Singapore, where I did my undergrad in Earth Science.
-  - I've worked on hydrology research for 4 years.
-  - I love maps, rocks, and chocolates!
-  
-</div>
+#### Master's Student in Urban Spatial Analytics </br> at the University of Pennsylvania
+</br>
+I love maps, rocks and chocolates. I'm from Singapore, where I did my undergraduate degree in Earth Science. 
+I have three years of research experience in GIS, remote sensing, hydrology, and geomorphology. 
+</br> With an interest in languages, I’m fluent in English, Chinese, and Japanese. 
 
-</div>
+:::
+
+::: {.g-col-5}
+
+![](images/pf.png){fig-alt="Profile" id="Profile"}
+
+:::
+
+:::
+</br>
+
+</br>
+</br>
+</br>

@@ -7,7 +7,7 @@ project:
 website:
   title: "MUSA 550 Final Project"
   page-footer:
-    left: "MUSA 550 Final Project"
+    left: "Wei Jing Ang, 2024"
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
 
   sidebar:
@@ -15,7 +15,7 @@ website:
     pinned: true
     align: center
     tools:
-      - icon: globe
+      - icon: mortarboard-fill
         href: https://scholar.google.com/citations?user=uX6hQK4AAAAJ&hl=en&authuser=1&oi=ao
         text: "Google Scholar"
       - icon: linkedin
@@ -29,19 +29,20 @@ website:
     collapse-level: 2
     contents:
       - href: index.qmd
-        text: Welcome
+        text: Introduction
       - about.qmd
       - section: analysis/index.qmd
         contents:
-          - analysis/1-python-code-blocks.qmd 
-          - analysis/2-static-images.ipynb
-          - analysis/3-altair-hvplot.ipynb
-          - analysis/4-folium.ipynb
+          - analysis/1-IF.qmd 
+          - analysis/2-Wetland.qmd
+          - analysis/3-Bathymetry.qmd
 
 format:
   html:
     highlight-style: solarized
-    theme: cosmo
+    theme: 
+    - cosmo
+    - custom.scss
     css: styles.css
     code-copy: true
     code-overflow: wrap
