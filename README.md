@@ -1,7 +1,7 @@
-# Quarto website template
+# Mapping the Amazon
 
-A template repository to use as a starting point for a public website describing
-the analysis and results the course's final project. The website uses
-Quarto to generate content and GitHub Pages to host the website.
+This repository hosts the Quarto website for my MUSA 550 Geospatial Data Science in Python final project. 
 
-The published site for this example repository is available at: [https://musa-550-fall-2024.github.io/quarto_template/](https://musa-550-fall-2024.github.io/quarto_template/).
+All data and codes used in this project is available at: https://github.com/musa-550-fall-2024/24fall-python-final-weijing_ang_proposal. 
+
+The Quarto website is adapted from https://musa-550-fall-2024.github.io/quarto_template/.
