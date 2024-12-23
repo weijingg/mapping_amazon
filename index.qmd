@@ -7,9 +7,9 @@ subtitle: "Using flooding frequency to estimate lake depths"
 
 </br>
 
-## Introduction
+## Overview
 
 The middle-lower Amazon River has a complex morphology, where seasonal flooding has formed large floodplain lakes along the riverbanks.
 The lakes regulate river flow, store nutrient-rich sediments and are home to diverse species. 
-In this project, the depth of 12 lakes along the Amazon River were estimated using flooding frequency, where areas that flood more are expected to be deeper. 
-Depth data is useful for research in ecology and hydrology, such as in determining biodiversity distribution and modelling water stratification. 
+In this project, the depth of 12 lakes along the Amazon River was estimated using flooding frequency, with areas that flood more being expected to be deeper. 
+Depth data is valuable for ecological and hydrological research, such as determining biodiversity distribution and modeling water stratification.

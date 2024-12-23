@@ -1,44 +1,32 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
+    "objectID": "5_conclusion.html",
+    "href": "5_conclusion.html",
+    "title": "Conclusion",
     "section": "",
-    "text": "I love maps, rocks and chocolates. I’m from Singapore, where I did my undergraduate degree in Earth Science. I have three years of research experience in GIS, remote sensing, hydrology, and geomorphology.  With an interest in languages, I’m fluent in English, Chinese, and Japanese.",
+    "text": "Conclusion",
     "crumbs": [
-      "About Me"
+      "Conclusion"
     ]
   },
   {
-    "objectID": "about.html#hi-im-wei-jing",
-    "href": "about.html#hi-im-wei-jing",
-    "title": "About Me",
-    "section": "",
-    "text": "I love maps, rocks and chocolates. I’m from Singapore, where I did my undergraduate degree in Earth Science. I have three years of research experience in GIS, remote sensing, hydrology, and geomorphology.  With an interest in languages, I’m fluent in English, Chinese, and Japanese.",
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Mapping the Amazon River",
+    "section": "Overview",
+    "text": "Overview\nThe middle-lower Amazon River has a complex morphology, where seasonal flooding has formed large floodplain lakes along the riverbanks. The lakes regulate river flow, store nutrient-rich sediments and are home to diverse species. In this project, the depth of 12 lakes along the Amazon River was estimated using flooding frequency, with areas that flood more being expected to be deeper. Depth data is valuable for ecological and hydrological research, such as determining biodiversity distribution and modeling water stratification.",
     "crumbs": [
-      "About Me"
+      "Overview"
     ]
   },
   {
-    "objectID": "analysis/2-Wetland.html",
-    "href": "analysis/2-Wetland.html",
-    "title": "Wetland Extent",
+    "objectID": "analysis/index.html",
+    "href": "analysis/index.html",
+    "title": "Analysis",
     "section": "",
-    "text": "Wetland extent was obtained from the Oakland Ridge National Laboratory Distributed Active Archive Centre (Hess et al., 2015). The raster was cropped to the floodplain along the Amazon River and resampled to the inundation frequency raster’s resolution.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport rasterio as rio\n\n# Import wetland extent\nwetland = rio.open(\"../data/wetland_nearest.tif\")\n\n# Read into a NumPy array (only 1 band)\nwetland_np = wetland.read(1)\n\n# Plot\nfig, ax = plt.subplots(figsize=(10, 4))\nimg = ax.imshow(wetland_np)\n\n# Set background to beige\nfig.patch.set_facecolor(\"#F9F8F2\")\nax.set_facecolor(\"#F9F8F2\")\n\n# Create an inset axes for the colorbar in the bottom right\ncax = ax.inset_axes([0.8, 0.15, 0.15, 0.03])  # [x, y, width, height]\n\n# Colorbar\ncbar = fig.colorbar(img, cax=cax, orientation='horizontal', shrink=0.3)\ncbar.ax.set_title(\"Wetland extent\", fontsize=10, pad=4, color='white') # title\ncbar.outline.set_linewidth(0)                                  # remove black outline\ncbar.ax.tick_params(size=0)                                    # remove ticks\ncbar.ax.xaxis.set_tick_params(pad=4, colors='white')           # tick labels\n\n# Remove axes for clean aesthetics\nax.axis(\"off\")\n\n\n\n\n\n\n\n\nFigure 1: Wetland extent",
+    "text": "Analysis\nIn this project, I focus on 12 floodplain lakes along the middle-lower Amazon, specifically investigating variations in their depths —  in other words, their bathymetry. Bathymetry data is useful in different research applications, such as determining sedimentation patterns, or the influence of water seasonality on floodplain biodiversity.\nCurrent methods on measuring bathymetry includes surveys that use an echo sounder attached to a boat. However, such surveys require much time, money, and manpower, hence are usually restricted to a small scale. To determine bathymetry on a larger scale, remote sensing is adopted, but many techniques are based on how light reflects off the water surface, which is less accurate when measuring cloudy water bodies like the Amazon lakes.\n\n\n\n\n\nFigure 1: Echo sounder (Johnson et al., 2012)\n\n\n\n\n\n\n\nFigure 2: Remote sensing (Wang et al., 2022)\n\n\n\n\nConsidering the limitations of both methods, this project uses a new method involving inundation frequency (IF), which refers to how often a certain part of a floodplain is flooded. As deeper parts of the floodplain would be flooded more frequently, the relationship between IF and depth can be modelled. This IF-depth model is based on one of the floodplain lakes within the study reach called Curuai, which has been surveyed by a team of researchers, and is applied to the rest of the study area. To focus on the floodplains, a mask will be created using a wetland extent raster to exclude non-floodplain areas from the analysis.\n\n\n\n\nFigure 3: Methodology flowchart",
     "crumbs": [
-      "Analysis",
-      "Wetland Extent"
-    ]
-  },
-  {
-    "objectID": "analysis/1-IF.html",
-    "href": "analysis/1-IF.html",
-    "title": "Inundation frequency",
-    "section": "",
-    "text": "Inundation frequency was obtained from the Global Surface Water Explorer Portal (Pekel et al., 2016). The water occurence tiles of 60W and 70W were merged and cropped to along the Amazon River.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport rasterio as rio\n\n# Import IF cropped\nIF_crop = rio.open(\"../data/IF_crop.tif\")\n\n# Read into a NumPy array (only 1 band)\nIF_crop_np = IF_crop.read(1)\n\n# Plot\nfig, ax = plt.subplots(figsize=(10, 4))\nimg = ax.imshow(IF_crop_np)\n\n# Set background to beige\nfig.patch.set_facecolor(\"#F9F8F2\")\nax.set_facecolor(\"#F9F8F2\")\n\n# Create an inset axes for the colorbar in the bottom right\ncax = ax.inset_axes([0.8, 0.15, 0.15, 0.03])  # [x, y, width, height]\n\n# Colorbar\ncbar = fig.colorbar(img, cax=cax, orientation='horizontal', shrink=0.3)\ncbar.ax.set_title(\"IF (%)\", fontsize=10, pad=4, color='white') # title\ncbar.outline.set_linewidth(0)                                  # remove black outline\ncbar.ax.tick_params(size=0)                                    # remove ticks\ncbar.ax.xaxis.set_tick_params(pad=4, colors='white')           # tick labels\n\n# Remove axes for clean aesthetics\nax.axis(\"off\")\n\n\n\n\n\n\n\n\nFigure 1: Inundation frequency",
-    "crumbs": [
-      "Analysis",
-      "Inundation frequency"
+      "Analysis"
     ]
   },
   {
@@ -53,23 +41,65 @@
     ]
   },
   {
-    "objectID": "analysis/index.html",
-    "href": "analysis/index.html",
-    "title": "Analysis",
+    "objectID": "2_about.html",
+    "href": "2_about.html",
+    "title": "About Me",
     "section": "",
-    "text": "Analysis\nCurrent methods on measuring depth (bathymetry) includes surveys that use an echo sounder attached to a boat. However, such surveys require much time, money, and manpower, hence are usually restricted to a small scale. To determine bathymetry on a larger scale, remote sensing is adopted, but many techniques are based on how light reflects off the water surface, which is less accurate when measuring cloudy water bodies like the Amazon lakes.\nConsidering the limitations of both methods, this project uses a new method involving flooding/ inundation frequency (IF), in other words, how often a certain part of a floodplain is flooded. As deeper parts of the floodplain would be flooded more, an IF-depth model can be used. This model is based on one of the floodplains called Curuai, which has been surveyed by a team of researchers, and is applied to the rest of the study area.",
+    "text": "I love maps, rocks and chocolates. I’m from Singapore, where I did my undergraduate degree in Earth Science. I have three years of research experience in GIS, remote sensing, hydrology, and geomorphology.  With an interest in languages, I’m fluent in English, Chinese, and Japanese.  If you would like to see more of my works, here is my portfolio!",
     "crumbs": [
-      "Analysis"
+      "About Me"
     ]
   },
   {
-    "objectID": "index.html#introduction",
-    "href": "index.html#introduction",
-    "title": "Mapping the Amazon River",
-    "section": "Introduction",
-    "text": "Introduction\nThe middle-lower Amazon River has a complex morphology, where seasonal flooding has formed large floodplain lakes along the riverbanks. The lakes regulate river flow, store nutrient-rich sediments and are home to diverse species. In this project, the depth of 12 lakes along the Amazon River were estimated using flooding frequency, where areas that flood more are expected to be deeper. Depth data is useful for research in ecology and hydrology, such as in determining biodiversity distribution and modelling water stratification.",
+    "objectID": "2_about.html#hi-im-wei-jing",
+    "href": "2_about.html#hi-im-wei-jing",
+    "title": "About Me",
+    "section": "",
+    "text": "I love maps, rocks and chocolates. I’m from Singapore, where I did my undergraduate degree in Earth Science. I have three years of research experience in GIS, remote sensing, hydrology, and geomorphology.  With an interest in languages, I’m fluent in English, Chinese, and Japanese.  If you would like to see more of my works, here is my portfolio!",
     "crumbs": [
-      "Introduction"
+      "About Me"
+    ]
+  },
+  {
+    "objectID": "6_ref.html",
+    "href": "6_ref.html",
+    "title": "References",
+    "section": "",
+    "text": "References\nAmazon Aid, 2024. The Amazon and Water. https://amazonaid.org/resources/about-the-amazon/the-amazon-and-water/\nAng, W.J., Park, E., & Alcantara, E. (2021). Mapping floodplain bathymetry in the middle-lower Amazon River using inundation frequency and field control. Geomorphology, 392, 107937. https://doi.org/10.1016/j.geomorph.2021.107937\nBarbosa, C.C.F., de Moraes Novo, E.M.L., Melack, J.M., de Freitas, R.M., & Pereira Filho, W. (2006). A methodology for analysis of volume and flooded area dynamics: Lago Grande de Curuai várzea as an example.\nHess, L.L., J.M. Melack, A.G. Affonso, C.C.F. Barbosa, M. Gastil-Buhl, and E.M.L.M. Novo. 2015. LBA-ECO LC-07 Wetland Extent, Vegetation, and Inundation: Lowland Amazon Basin. ORNL DAAC, Oak Ridge, Tennessee, USA. https://doi.org/10.3334/ORNLDAAC/1284\nJean-Francois Pekel, Andrew Cottam, Noel Gorelick, Alan S. Belward, 2016. High-resolution mapping of global surface water and its long-term changes. Nature 540, 418-422 (2016). https://doi.org/10.1038/nature20584\nJohnson, K.K., Duncker, J.J., & Jackson, P.R. (2012). The role of the US Geological Survey in Lake Michigan Diversion Accounting in Illinois, 1984-2010 (No. 2012-1243). US Geological Survey. https://doi.org/10.3133/ofr20121243\nPark, E., Emadzadeh, A., Alcântara, E., Yang, X., & Ho, H.L. (2020). Inferring floodplain bathymetry using inundation frequency. Journal of Environmental Management, 273, 111138. https://doi.org/10.1016/j.jenvman.2020.111138\nWang, Y., He, X., Bai, Y., Wang, D., Zhu, Q., Gong, F., … & Li, T. (2022). Satellite retrieval of benthic reflectance by combining lidar and passive high-resolution imagery: Case-I water. Remote Sensing of Environment, 272, 112955. https://doi.org/10.1016/j.rse.2022.112955",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "analysis/1-IF.html",
+    "href": "analysis/1-IF.html",
+    "title": "Inundation frequency",
+    "section": "",
+    "text": "Inundation frequency data was obtained from the Global Surface Water Explorer Portal (Pekel et al., 2016). The water occurence tiles of 60W and 70W were merged and cropped to along the middle-lower Amazon River. Inundation frequency varies from 0% to 100%, where 0% indicates areas that remain dry throughout the year, 100% indicates areas that remain wet, while the values in between reflect seasonally flooded areas. For detailed code on how the raster was processed, please refer to this repository.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport rasterio as rio\n\n# Import IF cropped\nIF_crop = rio.open(\"../data/IF_crop.tif\")\n\n# Read into a NumPy array (only 1 band)\nIF_crop_np = IF_crop.read(1)\n\n# Plot\nfig, ax = plt.subplots(figsize=(10, 4))\nimg = ax.imshow(IF_crop_np)\n\n# Set background to beige\nfig.patch.set_facecolor(\"#F9F8F2\")\nax.set_facecolor(\"#F9F8F2\")\n\n# Create an inset axes for the colorbar in the bottom right\ncax = ax.inset_axes([0.8, 0.15, 0.15, 0.03])  # [x, y, width, height]\n\n# Colorbar\ncbar = fig.colorbar(img, cax=cax, orientation='horizontal', shrink=0.3)\ncbar.ax.set_title(\"IF (%)\", fontsize=10, pad=4, color='white') # title\ncbar.outline.set_linewidth(0)                                  # remove black outline\ncbar.ax.tick_params(size=0)                                    # remove ticks\ncbar.ax.xaxis.set_tick_params(pad=4, colors='white')           # tick labels\n\n# Remove axes for clean aesthetics\nax.axis(\"off\")\n\n\n\n\n\n\n\n\nFigure 1: Inundation frequency\n\n\n\n\n\n\n\n The floodplain lakes of the middle-lower Amazon exhibit an interesting morphology. Each floodplain contains multiple lakes that form a patch network, interconnected with one other and the Amazon River by floodplain channels. This unique morphology causes the water levels in the floodplains to be largely in sync with the water level changes in the Amazon River, leading to significant variation in flooding frequency across the middle-lower Amazon.\n\n\n\n\n\nFigure 2: Lake morphology",
+    "crumbs": [
+      "Analysis",
+      "Inundation frequency"
+    ]
+  },
+  {
+    "objectID": "analysis/2-Wetland.html",
+    "href": "analysis/2-Wetland.html",
+    "title": "Wetland Extent",
+    "section": "",
+    "text": "Wetland extent was obtained from the Oakland Ridge National Laboratory Distributed Active Archive Centre (Hess et al., 2015). The raster was cropped to the floodplain along the Amazon River and resampled to the inundation frequency raster’s resolution.\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport rasterio as rio\n\n# Import wetland extent\nwetland = rio.open(\"../data/wetland_nearest.tif\")\n\n# Read into a NumPy array (only 1 band)\nwetland_np = wetland.read(1)\n\n# Plot\nfig, ax = plt.subplots(figsize=(10, 4))\nimg = ax.imshow(wetland_np)\n\n# Set background to beige\nfig.patch.set_facecolor(\"#F9F8F2\")\nax.set_facecolor(\"#F9F8F2\")\n\n# Create an inset axes for the colorbar in the bottom right\ncax = ax.inset_axes([0.8, 0.15, 0.15, 0.03])  # [x, y, width, height]\n\n# Colorbar\ncbar = fig.colorbar(img, cax=cax, orientation='horizontal', shrink=0.3)\ncbar.ax.set_title(\"Wetland extent\", fontsize=10, pad=4, color='white') # title\ncbar.outline.set_linewidth(0)                                  # remove black outline\ncbar.ax.tick_params(size=0)                                    # remove ticks\ncbar.ax.xaxis.set_tick_params(pad=4, colors='white')           # tick labels\n\n# Remove axes for clean aesthetics\nax.axis(\"off\")\n\n\n\n\n\n\n\n\nFigure 1: Wetland extent",
+    "crumbs": [
+      "Analysis",
+      "Wetland Extent"
+    ]
+  },
+  {
+    "objectID": "3_background.html",
+    "href": "3_background.html",
+    "title": "The Amazon",
+    "section": "",
+    "text": "The Amazon\nThe Amazon is the world’s largest river by volume of water. Flowing from the Andes to the Atlantic Ocean, its river basin covers nearly 40% of South America. The Amazon River carries more water than the next seven largest rivers combined, contributing 20% of the world’s freshwater river discharge to sea.\nThe middle-lower Amazon spans from the confluence with the Negro River to the confluence with the Tapajós River. Along this reach, large and complex floodplains lie on both sides of the river.\n\n\nCode\nimport folium\n\n# Set height\nf = folium.Figure(height=300)\n\n# Default OpenStreetMap basemap\nm = folium.Map(location=[-2.7, -57], zoom_start=7, control_scale=True).add_to(f)\n\n# Esri Satellite basemap\nesri_tile = folium.TileLayer(\n    tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',\n    attr='Esri',\n    name='Esri Satellite',  # This name will appear in the layer control\n    overlay=False,\n    control=True\n).add_to(m)\n\n# Toggle between layers\nfolium.LayerControl().add_to(m)\n\nm\n\n\n\n\n\n\n\nFigure 1: Middle-Lower Amazon River\n\n\n\n\n\n\nThe Amazon’s water level fluctuates seasonally by as much as 10 meters. During the low-water stage, water flows within the main channel. As the water level rises, it overflows the riverbanks, carrying sediments that are deposited as the water loses energy.\nThis flooding can last up to seven months each year. Over time, these sediment deposits accumulate, forming extensive floodplains. Within these floodplains, there are large water bodies known as floodplain lakes.\n\n\n\n\n\nFigure 2: Floodplain formation",
+    "crumbs": [
+      "The Amazon"
     ]
   }
 ]

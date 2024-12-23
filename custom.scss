@@ -59,7 +59,17 @@ $sidebar-bg:    $grey !default;
     margin-top: 10px;
 }
 
-// Figure 1
+// Figure captions
 .quarto-figure figcaption {
     text-align: center;
 }
+
+// Methods figures
+#method1 {
+    max-width: 85%;
+    margin-left: 40px;
+  }
+#method2 {
+    max-width: 85%;
+    margin-right: 30px;
+  }

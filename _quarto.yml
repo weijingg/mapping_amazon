@@ -29,13 +29,19 @@ website:
     collapse-level: 2
     contents:
       - href: index.qmd
-        text: Introduction
-      - about.qmd
+        text: Overview
+      - 2_about.qmd
+      - href: 3_background.qmd
+        text: The Amazon
       - section: analysis/index.qmd
         contents:
           - analysis/1-IF.qmd 
           - analysis/2-Wetland.qmd
           - analysis/3-Bathymetry.qmd
+      - href: 5_conclusion.qmd
+        text: Conclusion
+      - href: 6_ref.qmd
+        text: References
 
 format:
   html:

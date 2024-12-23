@@ -13,7 +13,8 @@ toc: false
 </br>
 I love maps, rocks and chocolates. I'm from Singapore, where I did my undergraduate degree in Earth Science. 
 I have three years of research experience in GIS, remote sensing, hydrology, and geomorphology. 
-</br> With an interest in languages, I’m fluent in English, Chinese, and Japanese. 
+</br> With an interest in languages, I’m fluent in English, Chinese, and Japanese.
+</br> If you would like to see more of my works, here is my [portfolio](https://weijingg.github.io/portfolio-wja/)! 
 
 :::
 

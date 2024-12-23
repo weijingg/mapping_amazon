@@ -1,0 +1,55 @@
+---
+format:
+  html:
+    code-fold: true
+---
+# The Amazon
+
+The Amazon is the world's largest river by volume of water. Flowing from the Andes to the Atlantic Ocean, its river basin covers nearly 40% of South America. 
+The Amazon River carries more water than the next seven largest rivers combined, contributing 20% of the world's freshwater river discharge to sea. 
+
+The middle-lower Amazon spans from the confluence with the Negro River to the confluence with the Tapajós River. 
+Along this reach, large and complex floodplains lie on both sides of the river.
+
+```{python}
+#| label: fig-amazon
+#| fig-cap: "Middle-Lower Amazon River"
+#| fig-number: false 
+
+import folium
+
+# Set height
+f = folium.Figure(height=300)
+
+# Default OpenStreetMap basemap
+m = folium.Map(location=[-2.7, -57], zoom_start=7, control_scale=True).add_to(f)
+
+# Esri Satellite basemap
+esri_tile = folium.TileLayer(
+    tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    attr='Esri',
+    name='Esri Satellite',  # This name will appear in the layer control
+    overlay=False,
+    control=True
+).add_to(m)
+
+# Toggle between layers
+folium.LayerControl().add_to(m)
+
+m
+```
+::: {.grid}
+::: {.g-col-6} 
+The Amazon’s water level fluctuates seasonally by as much as 10 meters. During the low-water stage, water flows 
+within the main channel. As the water level rises, it overflows the riverbanks, carrying sediments that are deposited as the 
+water loses energy. 
+
+This flooding can last up to seven months each year. Over time, these sediment deposits accumulate, forming 
+extensive floodplains. Within these floodplains, there are large water bodies known as floodplain lakes.
+:::
+
+::: {.g-col-6}
+![Figure 2: Floodplain formation](images/fp.gif){fig-alt="Floodplain formation" id="fp"}
+:::
+
+:::

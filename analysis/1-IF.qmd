@@ -5,8 +5,12 @@ format:
     code-fold: true
 ---
 
-Inundation frequency was obtained from the Global Surface Water Explorer Portal (Pekel et al., 2016). 
-The water occurence tiles of 60W and 70W were merged and cropped to along the Amazon River.
+Inundation frequency data was obtained from the Global Surface Water Explorer Portal (Pekel et al., 2016). 
+The water occurence tiles of 60W and 70W were merged and cropped to along the middle-lower Amazon River. 
+Inundation frequency varies from 0% to 100%, where 0% indicates areas that remain dry throughout the year, 
+100% indicates areas that remain wet, while the values in between reflect seasonally flooded areas. 
+For detailed code on how the raster was processed, please refer to this 
+[repository](https://github.com/musa-550-fall-2024/24fall-python-final-weijing_ang_proposal). 
 
 ```{python}
 #| label: fig-if
@@ -43,3 +47,16 @@ cbar.ax.xaxis.set_tick_params(pad=4, colors='white')           # tick labels
 # Remove axes for clean aesthetics
 ax.axis("off")
 ```
+::: {.grid}
+::: {.g-col-8} 
+</br>
+The floodplain lakes of the middle-lower Amazon exhibit an interesting morphology. Each floodplain contains multiple lakes that 
+form a patch network, interconnected with one other and the Amazon River by floodplain channels. 
+This unique morphology causes the water levels in the floodplains to be largely in sync with the water level changes in the Amazon River, 
+leading to significant variation in flooding frequency across the middle-lower Amazon.
+:::
+
+::: {.g-col-4} 
+![Figure 2: Lake morphology](/images/morph.png){fig-alt="Lake morphology" id="lakes"}
+:::
+:::

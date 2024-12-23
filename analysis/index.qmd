@@ -1,17 +1,33 @@
 # Analysis 
 
-Current methods on measuring depth (bathymetry) includes surveys that use an echo sounder attached to a boat. 
+In this project, I focus on 12 floodplain lakes along the middle-lower Amazon, 
+specifically investigating variations in their depths — </br> 
+in other words, their bathymetry. 
+Bathymetry data is useful in different research applications, such as determining sedimentation patterns, 
+or the influence of water seasonality on floodplain biodiversity.
+
+Current methods on measuring bathymetry includes surveys that use an echo sounder attached to a boat. 
 However, such surveys require much time, money, and manpower, hence are usually restricted to a small scale. 
 To determine bathymetry on a larger scale, remote sensing is adopted, but many techniques are based on how light 
 reflects off the water surface, which is less accurate when measuring cloudy water bodies like the Amazon lakes. 
 
-Considering the limitations of both methods, this project uses a new method involving flooding/ inundation frequency (IF), 
-in other words, how often a certain part of a floodplain is flooded. As deeper parts of the floodplain would be 
-flooded more, an IF-depth model can be used. This model is based on one of the floodplains called Curuai, 
-which has been surveyed by a team of researchers, and is applied to the rest of the study area. 
+::: {.grid}
+::: {.g-col-6} 
+![Figure 1: Echo sounder (Johnson et al., 2012)](/images/boat.png){fig-alt="Echo sounder" id="method1"}
+:::
 
-</br>
+::: {.g-col-6} 
+![Figure 2: Remote sensing (Wang et al., 2022)](/images/reflectance.jpg){fig-alt="Remote sensing" id="method2"}
+:::
+:::
+
+Considering the limitations of both methods, this project uses a new method involving inundation frequency (IF), 
+which refers to how often a certain part of a floodplain is flooded. As deeper parts of the floodplain would be 
+flooded more frequently, the relationship between IF and depth can be modelled. This IF-depth model is based on one 
+of the floodplain lakes within the study reach called Curuai, which has been surveyed by a team of researchers, and 
+is applied to the rest of the study area. To focus on the floodplains, a mask will be created using a wetland extent 
+raster to exclude non-floodplain areas from the analysis.
 
 <p align="center">
-    <img src="/images/flowchart.png" alt="Flowchart" style="width: 500px;">
+    ![Figure 3: Methodology flowchart](/images/flowchart.png){fig-alt="Flowchart" width="500px"}
 </p>
