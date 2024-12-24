@@ -3,14 +3,13 @@ title: "Bathymetry"
 format:
   html:
     code-fold: true
+execute:
+  eval: false
 ---
 
 Bathymetry was calculated using the IF raster and the IF-depth model. 
 
 ```{python}
-#| label: fig-bath
-#| fig-cap: "Bathymetry"
-
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
@@ -33,7 +32,7 @@ hydropoly_crop = hydropoly_crop.to_crs(epsg=bathymetry.crs.to_epsg())
 minx, miny, maxx, maxy = bathymetry.bounds;  # (left, bottom, right, top)
 
 # Define color breaks
-breaks2 = [0.0008,
+breaks2 = [1.763977570002549,
  3.4,
  5.2,
  6.1,
@@ -45,7 +44,7 @@ cmap = mcolors.LinearSegmentedColormap.from_list('custom_cmap', list(zip(np.lins
 norm = mcolors.BoundaryNorm(breaks2, cmap.N);
 
 # Plot
-fig, ax = plt.subplots(figsize=(10, 4))
+fig, ax = plt.subplots(figsize=(12, 8))
 img = ax.imshow(bathymetry_np,cmap=cmap, extent=[minx, maxx, miny, maxy],norm=norm);
 
 # Add the river polygon
@@ -63,9 +62,14 @@ cbar = fig.colorbar(img, cax=cax, orientation='horizontal', shrink=0.3)
 cbar.ax.set_title("Depth (m)", fontsize=10, pad=4) # Title
 cbar.outline.set_linewidth(0) # Remove the black outline
 cbar.ax.tick_params(size=0) # Remove ticks
-# cbar.set_ticklabels(['0','','','','7']) # Custom tick labels
+cbar.set_ticklabels(['1.8','','','','6.9']) # Custom tick labels
 cbar.ax.xaxis.set_tick_params(pad=4) # Tick labels
 
 # Remove axes for clean aesthetics
 ax.axis("off")
+
+plt.rcParams['figure.dpi'] = 300 
+
+plt.show()
 ```
+![Figure 1: Bathymetry](../images/bathymetry.jpg)

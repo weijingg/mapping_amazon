@@ -71,7 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-054b4dac1a392494bc2b80d423da1e9d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9e94d7443bc42a7d7d242d1517f7e8eb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d58a6804aa67c2dbc1eb59dbbddbca0b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -176,7 +176,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./analysis/1-IF.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Inundation frequency</span></a>
+ <span class="menu-text">Inundation Frequency</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -187,7 +187,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./analysis/3-Bathymetry.html" class="sidebar-item-text sidebar-link">
+  <a href="./analysis/3-Model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">IF-depth Model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./analysis/4-Bathymetry.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bathymetry</span></a>
   </div>
 </li>
@@ -284,7 +290,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
             <style>
-                #map_6887c273b3fd386050836b792001586d {
+                #map_41e111f6deafc3ed6fb1bb0693de9a6e {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -298,14 +304,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body>
     
     
-            <div class=&quot;folium-map&quot; id=&quot;map_6887c273b3fd386050836b792001586d&quot; ></div>
+            <div class=&quot;folium-map&quot; id=&quot;map_41e111f6deafc3ed6fb1bb0693de9a6e&quot; ></div>
         
 </body>
 <script>
     
     
-            var map_6887c273b3fd386050836b792001586d = L.map(
-                &quot;map_6887c273b3fd386050836b792001586d&quot;,
+            var map_41e111f6deafc3ed6fb1bb0693de9a6e = L.map(
+                &quot;map_41e111f6deafc3ed6fb1bb0693de9a6e&quot;,
                 {
                     center: [-2.7, -57.0],
                     crs: L.CRS.EPSG3857,
@@ -314,38 +320,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_6887c273b3fd386050836b792001586d);
+            L.control.scale().addTo(map_41e111f6deafc3ed6fb1bb0693de9a6e);
 
             
 
         
     
-            var tile_layer_e50169634466d55d7ff7c980380ba3a1 = L.tileLayer(
+            var tile_layer_babe7a38b6e801e519b35be80af80031 = L.tileLayer(
                 &quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;Data by \u0026copy; \u003ca target=\&quot;_blank\&quot; href=\&quot;http://openstreetmap.org\&quot;\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\&quot;_blank\&quot; href=\&quot;http://www.openstreetmap.org/copyright\&quot;\u003eODbL\u003c/a\u003e.&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
-            ).addTo(map_6887c273b3fd386050836b792001586d);
+            ).addTo(map_41e111f6deafc3ed6fb1bb0693de9a6e);
         
     
-            var tile_layer_2b2cc3f37a64699f4b02eca223f77faf = L.tileLayer(
+            var tile_layer_ec2f2081f7641d8299bcfa4ada55e147 = L.tileLayer(
                 &quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&quot;,
                 {&quot;attribution&quot;: &quot;Esri&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
-            ).addTo(map_6887c273b3fd386050836b792001586d);
+            ).addTo(map_41e111f6deafc3ed6fb1bb0693de9a6e);
         
     
-            var layer_control_bb69528144c5b93f781f7e5b75030c45 = {
+            var layer_control_886d64784999b07272d243583a95aad5 = {
                 base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_e50169634466d55d7ff7c980380ba3a1,
-                    &quot;Esri Satellite&quot; : tile_layer_2b2cc3f37a64699f4b02eca223f77faf,
+                    &quot;openstreetmap&quot; : tile_layer_babe7a38b6e801e519b35be80af80031,
+                    &quot;Esri Satellite&quot; : tile_layer_ec2f2081f7641d8299bcfa4ada55e147,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_bb69528144c5b93f781f7e5b75030c45.base_layers,
-                layer_control_bb69528144c5b93f781f7e5b75030c45.overlays,
+                layer_control_886d64784999b07272d243583a95aad5.base_layers,
+                layer_control_886d64784999b07272d243583a95aad5.overlays,
                 {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: true, &quot;position&quot;: &quot;topright&quot;}
-            ).addTo(map_6887c273b3fd386050836b792001586d);
-            tile_layer_2b2cc3f37a64699f4b02eca223f77faf.remove();
+            ).addTo(map_41e111f6deafc3ed6fb1bb0693de9a6e);
+            tile_layer_ec2f2081f7641d8299bcfa4ada55e147.remove();
         
 </script>
 </html>" width="100%" height="300" style="border:none !important;" "allowfullscreen"="" "webkitallowfullscreen"="" "mozallowfullscreen"=""></iframe>

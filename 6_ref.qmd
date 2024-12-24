@@ -2,6 +2,8 @@
 
 Amazon Aid, 2024. The Amazon and Water. [https://amazonaid.org/resources/about-the-amazon/the-amazon-and-water/](https://amazonaid.org/resources/about-the-amazon/the-amazon-and-water/)
 
+Amazon Waters Alliance, 2024. Wetland Forests. [https://en.aguasamazonicas.org/wetlands/wetlands-types/wetland-forests](https://en.aguasamazonicas.org/wetlands/wetlands-types/wetland-forests)
+
 Ang, W.J., Park, E., & Alcantara, E. (2021). Mapping floodplain bathymetry in the middle-lower Amazon River using inundation frequency and field control. Geomorphology, 392, 107937. [https://doi.org/10.1016/j.geomorph.2021.107937](https://doi.org/10.1016/j.geomorph.2021.107937)
 
 Barbosa, C.C.F., de Moraes Novo, E.M.L., Melack, J.M., de Freitas, R.M., & Pereira Filho, W. (2006). A methodology for analysis of volume and flooded area dynamics: Lago Grande de Curuai várzea as an example. 
@@ -11,6 +13,8 @@ Hess, L.L., J.M. Melack, A.G. Affonso, C.C.F. Barbosa, M. Gastil-Buhl, and E.M.L
 Jean-Francois Pekel, Andrew Cottam, Noel Gorelick, Alan S. Belward, 2016. High-resolution mapping of global surface water and its long-term changes. Nature 540, 418-422 (2016). [https://doi.org/10.1038/nature20584](https://doi.org/10.1038/nature20584)
 
 Johnson, K.K., Duncker, J.J., & Jackson, P.R. (2012). The role of the US Geological Survey in Lake Michigan Diversion Accounting in Illinois, 1984-2010 (No. 2012-1243). US Geological Survey. [https://doi.org/10.3133/ofr20121243](https://doi.org/10.3133/ofr20121243) 
+
+Mortillaro, J.M., Passarelli, C., Abril, G., Hubas, C., Albéric, P., Artigas, L.F., ... & Meziane, T. (2016). The fate of C4 and C3 macrophyte carbon in central Amazon floodplain waters: Insights from a batch experiment. Limnologica, 59, 90-98. [https://doi.org/10.1016/j.limno.2016.03.008](https://doi.org/10.1016/j.limno.2016.03.008)
 
 Park, E., Emadzadeh, A., Alcântara, E., Yang, X., & Ho, H.L. (2020). Inferring floodplain bathymetry using inundation frequency. Journal of Environmental Management, 273, 111138. [https://doi.org/10.1016/j.jenvman.2020.111138](https://doi.org/10.1016/j.jenvman.2020.111138)
 

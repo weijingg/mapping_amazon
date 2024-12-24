@@ -71,7 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-054b4dac1a392494bc2b80d423da1e9d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9e94d7443bc42a7d7d242d1517f7e8eb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d58a6804aa67c2dbc1eb59dbbddbca0b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -113,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/index.html">Analysis</a></li><li class="breadcrumb-item"><a href="../analysis/3-Bathymetry.html">Bathymetry</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/index.html">Analysis</a></li><li class="breadcrumb-item"><a href="../analysis/4-Bathymetry.html">Bathymetry</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -173,7 +173,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../analysis/1-IF.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Inundation frequency</span></a>
+ <span class="menu-text">Inundation Frequency</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -184,7 +184,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../analysis/3-Bathymetry.html" class="sidebar-item-text sidebar-link active">
+  <a href="../analysis/3-Model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">IF-depth Model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../analysis/4-Bathymetry.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Bathymetry</span></a>
   </div>
 </li>
@@ -213,7 +219,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/index.html">Analysis</a></li><li class="breadcrumb-item"><a href="../analysis/3-Bathymetry.html">Bathymetry</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/index.html">Analysis</a></li><li class="breadcrumb-item"><a href="../analysis/4-Bathymetry.html">Bathymetry</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Bathymetry</h1>
 </div>
@@ -233,7 +239,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Bathymetry was calculated using the IF raster and the IF-depth model.</p>
-<div class="cell" data-execution_count="1">
+<div id="caf4ac3d" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -258,7 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>minx, miny, maxx, maxy <span class="op">=</span> bathymetry.bounds<span class="op">;</span>  <span class="co"># (left, bottom, right, top)</span></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Define color breaks</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>breaks2 <span class="op">=</span> [<span class="fl">0.0008</span>,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>breaks2 <span class="op">=</span> [<span class="fl">1.763977570002549</span>,</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a> <span class="fl">3.4</span>,</span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a> <span class="fl">5.2</span>,</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a> <span class="fl">6.1</span>,</span>
@@ -270,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>norm <span class="op">=</span> mcolors.BoundaryNorm(breaks2, cmap.N)<span class="op">;</span></span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">4</span>))</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">8</span>))</span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>img <span class="op">=</span> ax.imshow(bathymetry_np,cmap<span class="op">=</span>cmap, extent<span class="op">=</span>[minx, maxx, miny, maxy],norm<span class="op">=</span>norm)<span class="op">;</span></span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the river polygon</span></span>
@@ -288,46 +294,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>cbar.ax.set_title(<span class="st">"Depth (m)"</span>, fontsize<span class="op">=</span><span class="dv">10</span>, pad<span class="op">=</span><span class="dv">4</span>) <span class="co"># Title</span></span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>cbar.outline.set_linewidth(<span class="dv">0</span>) <span class="co"># Remove the black outline</span></span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>cbar.ax.tick_params(size<span class="op">=</span><span class="dv">0</span>) <span class="co"># Remove ticks</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="co"># cbar.set_ticklabels(['0','','','','7']) # Custom tick labels</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>cbar.set_ticklabels([<span class="st">'1.8'</span>,<span class="st">''</span>,<span class="st">''</span>,<span class="st">''</span>,<span class="st">'6.9'</span>]) <span class="co"># Custom tick labels</span></span>
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>cbar.ax.xaxis.set_tick_params(pad<span class="op">=</span><span class="dv">4</span>) <span class="co"># Tick labels</span></span>
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove axes for clean aesthetics</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>ax.axis(<span class="st">"off"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>ax.axis(<span class="st">"off"</span>)</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'figure.dpi'</span>] <span class="op">=</span> <span class="dv">300</span> </span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-bath" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-bath-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="fig-bath-1" class="cell-output cell-output-display quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-bath-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<pre id="fig-bath-1" class="cell-output cell-output-display" data-execution_count="1"><code>(-60.86754719044736,
- -52.78150900060542,
- -4.322904641248208,
- -1.6190025337876408)</code></pre>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-bath-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) Bathymetry
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/bathymetry.jpg" class="img-fluid figure-img"></p>
+<figcaption>Figure 1: Bathymetry</figcaption>
 </figure>
-</div>
-<div class="cell-output cell-output-display">
-<div id="fig-bath-2" class="quarto-float quarto-figure quarto-figure-center anchored" height="274" width="763">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-bath-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="3-Bathymetry_files/figure-html/fig-bath-output-2.png" id="fig-bath-2" data-ref-parent="fig-bath" width="763" height="274" class="figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-bath-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b)
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-bath-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
-</figcaption>
-</figure>
-</div>
 </div>
 
 

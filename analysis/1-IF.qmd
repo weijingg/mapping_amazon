@@ -1,11 +1,11 @@
 ---
-title: "Inundation frequency"
+title: "Inundation Frequency"
 format:
   html:
     code-fold: true
 ---
 
-Inundation frequency data was obtained from the Global Surface Water Explorer Portal (Pekel et al., 2016). 
+Inundation frequency (IF) data was obtained from the Global Surface Water Explorer Portal (Pekel et al., 2016). 
 The water occurence tiles of 60W and 70W were merged and cropped to along the middle-lower Amazon River. 
 Inundation frequency varies from 0% to 100%, where 0% indicates areas that remain dry throughout the year, 
 100% indicates areas that remain wet, while the values in between reflect seasonally flooded areas. 

@@ -1,0 +1,166 @@
+---
+title: "IF-depth Model"
+format:
+  html:
+    code-fold: true
+---
+
+The relationship between inundation frequency (IF) and bathymetry is modelled using a boat survey conducted by a team of researchers 
+at one of the lakes within the middle-lower Amazon reach -- Curuai (Barbosa et al., 2006). The more frequently inundated parts of the 
+lake are generally observed to be deeper. 
+
+```{python}
+#| label: fig-CRIF
+#| fig-cap: "Inundation frequency at Curuai"
+
+import numpy as np
+import matplotlib.pyplot as plt
+import rasterio as rio
+
+# Import Curuai IF
+IF_CR = rio.open("../data/IF_CR.tif")
+
+# Read into a NumPy array (only 1 band)
+IF_CR_np = IF_CR.read(1)
+
+# Plot
+fig, ax = plt.subplots(figsize=(10, 4))
+img = ax.imshow(IF_CR_np)
+
+# Set background to beige
+fig.patch.set_facecolor("#F9F8F2")
+ax.set_facecolor("#F9F8F2")
+
+# Create an inset axes for the colorbar in the bottom right
+cax = ax.inset_axes([0.75, 0.8, 0.15, 0.03])  # [x, y, width, height]
+
+# Colorbar
+cbar = fig.colorbar(img, cax=cax, orientation='horizontal', shrink=0.3)
+cbar.ax.set_title("IF (%)", fontsize=10, pad=4, color='white') # title
+cbar.outline.set_linewidth(0)                                  # remove black outline
+cbar.ax.tick_params(size=0)                                    # remove ticks
+cbar.ax.xaxis.set_tick_params(pad=4, colors='white')           # tick labels
+
+# Remove axes for clean aesthetics
+ax.axis("off")
+```
+
+```{python}
+#| label: fig-CRdepth
+#| fig-cap: "Surveyed depth at Curuai"
+
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+import rasterio as rio
+
+# Import curuai reprojected
+curuai_proj = rio.open("../data/Barbosa_bathy/Barbosa_bathy2.tif")
+
+# Read into a NumPy array (only 1 band)
+curuai_proj_np = curuai_proj.read(1)
+
+# Change <0 to NaN
+curuai_over0 = curuai_proj_np
+curuai_over0[curuai_over0<0]=np.nan
+
+# Define breaks
+breaks = [0,1,2,3,4,5,6,7,9.999783]
+
+# Define discrete colormap
+cmap = plt.get_cmap('BuPu', len(breaks) - 1)
+norm = mcolors.BoundaryNorm(breaks, cmap.N)
+
+# Plot
+fig, ax = plt.subplots(figsize=(9,14))
+img = ax.imshow(curuai_over0, cmap=cmap, norm=norm)
+
+# Set background to beige
+fig.patch.set_facecolor("#F9F8F2")
+ax.set_facecolor("#F9F8F2")
+
+# Create an inset axes for the colorbar in the bottom right
+cax = ax.inset_axes([0.7, 0.8, 0.15, 0.03])  # [x, y, width, height]
+
+# Colorbar
+cbar = fig.colorbar(img, cax=cax, orientation='horizontal', shrink=0.3)
+cbar.ax.set_title("Surveyed depth (m)", fontsize=10, pad=4) # title
+cbar.outline.set_linewidth(0) # Remove the black outline
+cbar.ax.tick_params(size=0) # Remove ticks
+
+# Custom tick labels
+cbar.set_ticklabels(['0','','','','','','','','10'])
+cbar.ax.xaxis.set_tick_params(pad=4) # tick labels
+
+# Remove axes for clean aesthetics
+ax.axis("off")
+```
+
+Data points with IF below 50% are found at peripheral lake boundaries, which are elevated and mostly remain 
+dry even during the wet season, or in small lakes (under 1 km<sup>2</sup>) disconnected from the river (Park et al., 2020). 
+These points are excluded from the IF-depth model, to focus on the large and interconnected round lakes that 
+are more sensitive to the model. Even with the exclusion of such points, 70.8% to 93.8% of the floodplain areas 
+are retained for bathymetric calculations. 
+
+```{python}
+#| label: fig-model
+#| fig-cap: "IF-depth model"
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load data on model
+model = pd.read_csv("../data/model.csv")
+
+def exponential_regression(x, y):
+    """Calculates the exponential regression line for given x and y values."""
+
+    # Transform the data into a linear relationship
+    log_y = np.log(y)
+
+    # Perform linear regression on the transformed data
+    coeffs = np.polyfit(x, log_y, 1)
+
+    # Extract the coefficients
+    a = np.exp(coeffs[1])
+    b = coeffs[0]
+
+    # Return the exponential function
+    return lambda x: a * np.exp(b * x)
+
+regression_func = exponential_regression(model['IF'],model['Depth'])
+
+# Trendline
+trendline = regression_func(range(50, 100))
+
+fig, ax = plt.subplots(figsize=(10, 6))
+
+ax.scatter(
+    model['IF'],
+    model['Depth'],
+    marker="o",
+    alpha=0.75,
+    zorder=10
+)
+
+# Plot the regression line on top of the scatter plot
+ax.plot(
+    range(50, 100),
+    trendline,
+    color = "grey",
+    linewidth=3,
+    zorder=15
+)
+
+# Annotate equation
+plt.text(53, 7.2, r'$y = 0.0008x^{1.9679}$', fontsize=12)
+
+# Format graph
+ax.set_xlabel("Inundation Frequency (%)") # x-axis label
+ax.set_ylabel("Depth (m)") # y-axis label
+ax.set_facecolor('#F9F8F2') # background colour
+fig.patch.set_facecolor('#F9F8F2')
+ax.spines['top'].set_visible(False) # turn off 2 lines
+ax.spines['right'].set_visible(False)
+```
