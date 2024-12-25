@@ -38,10 +38,12 @@ website:
           - analysis/1-IF.qmd 
           - analysis/2-Wetland.qmd
           - analysis/3-Model.qmd
-          - analysis/4-Bathymetry.qmd
-      - href: 5_conclusion.qmd
+      - section: 4-Bathymetry.qmd
+        contents:
+          - 5-Comparison.qmd
+      - href: 6_conclusion.qmd
         text: Conclusion
-      - href: 6_ref.qmd
+      - href: 7_ref.qmd
         text: References
 
 format:

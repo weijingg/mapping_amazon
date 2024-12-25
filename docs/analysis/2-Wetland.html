@@ -113,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/index.html">Analysis</a></li><li class="breadcrumb-item"><a href="../analysis/2-Wetland.html">Wetland Extent</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/index.html">Methods and Analysis</a></li><li class="breadcrumb-item"><a href="../analysis/2-Wetland.html">Wetland Extent</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -164,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../analysis/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Analysis</span></a>
+ <span class="menu-text">Methods and Analysis</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -188,23 +188,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">IF-depth Model</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../4-Bathymetry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Results: Bathymetry</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../analysis/4-Bathymetry.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bathymetry</span></a>
+  <a href="../5-Comparison.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comparison with Wetland</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../5_conclusion.html" class="sidebar-item-text sidebar-link">
+  <a href="../6_conclusion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conclusion</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../6_ref.html" class="sidebar-item-text sidebar-link">
+  <a href="../7_ref.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -219,7 +230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/index.html">Analysis</a></li><li class="breadcrumb-item"><a href="../analysis/2-Wetland.html">Wetland Extent</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/index.html">Methods and Analysis</a></li><li class="breadcrumb-item"><a href="../analysis/2-Wetland.html">Wetland Extent</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Wetland Extent</h1>
 </div>
@@ -238,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Wetland extent data was obtained from the Oakland Ridge National Laboratory Distributed Active Archive Centre (Hess et al., 2015). The raster was cropped to along the middle-lower Amazon River and resampled to the inundation frequency (IF) raster’s resolution. The raster contains information on wetland cover during both low-water and high-water stage in the Amazon, but because the IF-depth model is calibrated using survey data collected during the flooding season, the high-water stage wetland data was used to mask the IF data. For detailed code on how the raster was processed, please refer to this <a href="https://github.com/musa-550-fall-2024/24fall-python-final-weijing_ang_proposal">repository</a>.</p>
+<p>Wetland extent data was obtained from the Oakland Ridge National Laboratory Distributed Active Archive Centre (Hess et al., 2015). The raster was cropped to along the middle-lower Amazon River and resampled to the inundation frequency (IF) raster’s resolution. The raster contains information on wetland cover during both low-water and high-water stage in the Amazon, but because the IF-depth model is calibrated using survey data collected during the flooding season, the high-water stage wetland data was used to mask the IF data. For detailed code on how the raster was processed using <strong>rasterio and rioxarray</strong>, please refer to this <a href="https://github.com/musa-550-fall-2024/24fall-python-final-weijing_ang_proposal">repository</a>.</p>
 <div id="cell-fig-wetland" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
@@ -324,7 +335,7 @@ Figure&nbsp;1: Wetland extent during high-water stage
 <div id="plant1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="../images/macrophyte.jpg" class="img-fluid figure-img" alt="Macrophyte"></p>
-<figcaption>Figure 1: Macrophytes (Mortillaro et al., 2016)</figcaption>
+<figcaption>Figure 2: Macrophytes (Mortillaro et al., 2016)</figcaption>
 </figure>
 </div>
 </div>
@@ -332,7 +343,7 @@ Figure&nbsp;1: Wetland extent during high-water stage
 <div id="plant2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="../images/forest.jpeg" class="img-fluid figure-img" alt="Forest"></p>
-<figcaption>Figure 2: Flooded forest (Amazon Waters Alliance, 2024)</figcaption>
+<figcaption>Figure 3: Flooded forest (Amazon Waters Alliance, 2024)</figcaption>
 </figure>
 </div>
 </div>

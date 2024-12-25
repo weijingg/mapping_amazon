@@ -1,5 +1,5 @@
 ---
-title: "Bathymetry"
+title: "Results: Bathymetry"
 format:
   html:
     code-fold: true
@@ -7,7 +7,9 @@ execute:
   eval: false
 ---
 
-Bathymetry was calculated using the IF raster and the IF-depth model. 
+Applying the IF-depth model to the inundation frequency across the middle-lower Amazon, the calculated bathymetry of the 
+floodplain lakes ranges from 1.8m to 6.9m with respect to the high-water season. The shallowest depth starts at 1.8m because 
+data points with IF under 50% were excluded. 
 
 ```{python}
 import numpy as np
@@ -59,11 +61,21 @@ cax = ax.inset_axes([0.8, 0.05, 0.15, 0.03])  # [x, y, width, height]
 
 # Colorbar
 cbar = fig.colorbar(img, cax=cax, orientation='horizontal', shrink=0.3)
-cbar.ax.set_title("Depth (m)", fontsize=10, pad=4) # Title
+cbar.ax.set_title("Depth (m)", fontsize=10, fontname='Raleway', pad=4) # Title
 cbar.outline.set_linewidth(0) # Remove the black outline
 cbar.ax.tick_params(size=0) # Remove ticks
 cbar.set_ticklabels(['1.8','','','','6.9']) # Custom tick labels
 cbar.ax.xaxis.set_tick_params(pad=4) # Tick labels
+
+# Define Avenir font properties
+avenir_font = fm.FontProperties(family='Avenir',size=15)
+
+# Change tick label font and size
+for label in cbar.ax.get_xticklabels():
+    label.set_fontproperties(avenir_font)
+
+# Title and layout
+plt.title("The Amazon River's floodplain lakes", fontsize=18, fontweight="bold", loc="left", pad = 10, x=0.05,y=0.85, fontname='Raleway')
 
 # Remove axes for clean aesthetics
 ax.axis("off")
@@ -72,4 +84,13 @@ plt.rcParams['figure.dpi'] = 300
 
 plt.show()
 ```
-![Figure 1: Bathymetry](../images/bathymetry.jpg)
+![Figure 1: Bathymetry](images/bathymetry.jpg)
+
+Zooming into the 12 lakes of interest, they have varying depths. Most lakes lie on the alluvial plain, 
+the flat surface along the river banks formed from deposition of sediments over time. These lakes are 
+large, round, and more shallow (lakes 1, 2, 5, 6, 9, 10, 11). However, some lakes are incised in valleys, 
+lying near the foot of the upland rocks, hence are generally deeper (lakes 3, 8, 12). Interestingly, 
+lakes 4 and 7 are divided into half by a thick ridge, where the lower half nearer to the alluvial plain is shallower, 
+while the upper half nearer to the valleys is deeper.
+
+![Figure 2: Bathymetry of individual lakes](images/lakes.jpg)

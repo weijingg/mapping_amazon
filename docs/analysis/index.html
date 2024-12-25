@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/index.html">Analysis</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../analysis/index.html">Methods and Analysis</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../analysis/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Analysis</span></a>
+ <span class="menu-text">Methods and Analysis</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -154,23 +154,34 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">IF-depth Model</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../4-Bathymetry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Results: Bathymetry</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../analysis/4-Bathymetry.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bathymetry</span></a>
+  <a href="../5-Comparison.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comparison with Wetland</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../5_conclusion.html" class="sidebar-item-text sidebar-link">
+  <a href="../6_conclusion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conclusion</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../6_ref.html" class="sidebar-item-text sidebar-link">
+  <a href="../7_ref.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -184,7 +195,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#analysis" id="toc-analysis" class="nav-link active" data-scroll-target="#analysis">Analysis</a></li>
+  <li><a href="#methods-and-analysis" id="toc-methods-and-analysis" class="nav-link active" data-scroll-target="#methods-and-analysis">Methods and Analysis</a>
+  <ul class="collapse">
+  <li><a href="#using-inundation-frequency" id="toc-using-inundation-frequency" class="nav-link" data-scroll-target="#using-inundation-frequency">Using inundation frequency</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -194,8 +208,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="analysis" class="level1">
-<h1>Analysis</h1>
+<section id="methods-and-analysis" class="level1">
+<h1>Methods and Analysis</h1>
 <p>In this project, I focus on 12 floodplain lakes along the middle-lower Amazon, specifically investigating variations in their depths — <br> in other words, their bathymetry. Bathymetry data is useful in different research applications, such as determining sedimentation patterns, or the influence of water seasonality on floodplain biodiversity.</p>
 <p>Current methods on measuring bathymetry includes surveys that use an echo sounder attached to a boat. However, such surveys require much time, money, and manpower, hence are usually restricted to a small scale. To determine bathymetry on a larger scale, remote sensing is adopted, but many techniques are based on how light reflects off the water surface, which is less accurate when measuring cloudy water bodies like the Amazon lakes.</p>
 <div class="grid">
@@ -216,7 +230,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Considering the limitations of both methods, this project uses a new method involving inundation frequency (IF), which refers to how often a certain part of a floodplain is flooded. As deeper parts of the floodplain would be flooded more frequently, the relationship between IF and depth can be modelled. This IF-depth model is based on one of the floodplain lakes within the study reach called Curuai, which has been surveyed by a team of researchers, and is applied to the rest of the study area. To focus on the floodplains, a mask will be created using a wetland extent raster to exclude non-floodplain areas from the analysis.</p>
+<section id="using-inundation-frequency" class="level3">
+<h3 class="anchored" data-anchor-id="using-inundation-frequency">Using inundation frequency</h3>
+<p>Considering the limitations of both methods, this project uses a new method involving inundation frequency (IF), which refers to how often a certain part of a floodplain is flooded. As deeper parts of the floodplain would be flooded more frequently, the relationship between IF and depth can be modelled. This IF-depth model is based on one of the floodplain lakes within the study reach called Curuai, which has been surveyed by a team of researchers, and is applied to the rest of the study area. To focus on the floodplains, a mask will be created using a wetland extent raster to exclude non-floodplain areas from the analysis. Specifically, <strong>three data sources are used:</strong> inundation frequency (Pekel et al., 2016), wetland extent (Hess et al., 2015), and bathymetry survey at Curuai Lake (Barbosa et al., 2006).</p>
 <p align="center">
 </p><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -227,6 +243,7 @@ ul.task-list li input[type="checkbox"] {
 <p></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

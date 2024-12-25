@@ -9,7 +9,7 @@ Inundation frequency (IF) data was obtained from the Global Surface Water Explor
 The water occurence tiles of 60W and 70W were merged and cropped to along the middle-lower Amazon River. 
 Inundation frequency varies from 0% to 100%, where 0% indicates areas that remain dry throughout the year, 
 100% indicates areas that remain wet, while the values in between reflect seasonally flooded areas. 
-For detailed code on how the raster was processed, please refer to this 
+For detailed code on how the raster was processed using **rasterio and rioxarray**, please refer to this 
 [repository](https://github.com/musa-550-fall-2024/24fall-python-final-weijing_ang_proposal). 
 
 ```{python}

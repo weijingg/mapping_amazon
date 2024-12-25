@@ -167,7 +167,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./analysis/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Analysis</span></a>
+ <span class="menu-text">Methods and Analysis</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -191,23 +191,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">IF-depth Model</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./4-Bathymetry.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Results: Bathymetry</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./analysis/4-Bathymetry.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bathymetry</span></a>
+  <a href="./5-Comparison.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Comparison with Wetland</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./5_conclusion.html" class="sidebar-item-text sidebar-link">
+  <a href="./6_conclusion.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conclusion</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./6_ref.html" class="sidebar-item-text sidebar-link">
+  <a href="./7_ref.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -290,7 +301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
             <style>
-                #map_41e111f6deafc3ed6fb1bb0693de9a6e {
+                #map_951d5c79d31b9df50e3438389b3bda55 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -304,14 +315,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body>
     
     
-            <div class=&quot;folium-map&quot; id=&quot;map_41e111f6deafc3ed6fb1bb0693de9a6e&quot; ></div>
+            <div class=&quot;folium-map&quot; id=&quot;map_951d5c79d31b9df50e3438389b3bda55&quot; ></div>
         
 </body>
 <script>
     
     
-            var map_41e111f6deafc3ed6fb1bb0693de9a6e = L.map(
-                &quot;map_41e111f6deafc3ed6fb1bb0693de9a6e&quot;,
+            var map_951d5c79d31b9df50e3438389b3bda55 = L.map(
+                &quot;map_951d5c79d31b9df50e3438389b3bda55&quot;,
                 {
                     center: [-2.7, -57.0],
                     crs: L.CRS.EPSG3857,
@@ -320,38 +331,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_41e111f6deafc3ed6fb1bb0693de9a6e);
+            L.control.scale().addTo(map_951d5c79d31b9df50e3438389b3bda55);
 
             
 
         
     
-            var tile_layer_babe7a38b6e801e519b35be80af80031 = L.tileLayer(
+            var tile_layer_9a049497549cfa18c289bd3b370a785b = L.tileLayer(
                 &quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;Data by \u0026copy; \u003ca target=\&quot;_blank\&quot; href=\&quot;http://openstreetmap.org\&quot;\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\&quot;_blank\&quot; href=\&quot;http://www.openstreetmap.org/copyright\&quot;\u003eODbL\u003c/a\u003e.&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
-            ).addTo(map_41e111f6deafc3ed6fb1bb0693de9a6e);
+            ).addTo(map_951d5c79d31b9df50e3438389b3bda55);
         
     
-            var tile_layer_ec2f2081f7641d8299bcfa4ada55e147 = L.tileLayer(
+            var tile_layer_5bb153d9b84903404e40965040a03b21 = L.tileLayer(
                 &quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&quot;,
                 {&quot;attribution&quot;: &quot;Esri&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
-            ).addTo(map_41e111f6deafc3ed6fb1bb0693de9a6e);
+            ).addTo(map_951d5c79d31b9df50e3438389b3bda55);
         
     
-            var layer_control_886d64784999b07272d243583a95aad5 = {
+            var layer_control_23774330b04f8ae712c233a3bebedc78 = {
                 base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_babe7a38b6e801e519b35be80af80031,
-                    &quot;Esri Satellite&quot; : tile_layer_ec2f2081f7641d8299bcfa4ada55e147,
+                    &quot;openstreetmap&quot; : tile_layer_9a049497549cfa18c289bd3b370a785b,
+                    &quot;Esri Satellite&quot; : tile_layer_5bb153d9b84903404e40965040a03b21,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_886d64784999b07272d243583a95aad5.base_layers,
-                layer_control_886d64784999b07272d243583a95aad5.overlays,
+                layer_control_23774330b04f8ae712c233a3bebedc78.base_layers,
+                layer_control_23774330b04f8ae712c233a3bebedc78.overlays,
                 {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: true, &quot;position&quot;: &quot;topright&quot;}
-            ).addTo(map_41e111f6deafc3ed6fb1bb0693de9a6e);
-            tile_layer_ec2f2081f7641d8299bcfa4ada55e147.remove();
+            ).addTo(map_951d5c79d31b9df50e3438389b3bda55);
+            tile_layer_5bb153d9b84903404e40965040a03b21.remove();
         
 </script>
 </html>" width="100%" height="300" style="border:none !important;" "allowfullscreen"="" "webkitallowfullscreen"="" "mozallowfullscreen"=""></iframe>

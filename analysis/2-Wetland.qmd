@@ -9,7 +9,7 @@ Wetland extent data was obtained from the Oakland Ridge National Laboratory Dist
 The raster was cropped to along the middle-lower Amazon River and resampled to the inundation frequency (IF) raster's resolution. The raster 
 contains information on wetland cover during both low-water and high-water stage in the Amazon, but because the IF-depth model is 
 calibrated using survey data collected during the flooding season, the high-water stage wetland data was used to mask the IF data. 
-For detailed code on how the raster was processed, please refer to this 
+For detailed code on how the raster was processed using **rasterio and rioxarray**, please refer to this 
 [repository](https://github.com/musa-550-fall-2024/24fall-python-final-weijing_ang_proposal). 
 
 ```{python}
@@ -85,10 +85,10 @@ that grow in or near the water, to forests that are annually submerged under 10 
 
 ::: {.grid}
 ::: {.g-col-6} 
-![Figure 1: Macrophytes (Mortillaro et al., 2016)](/images/macrophyte.jpg){fig-alt="Macrophyte" id="plant1"}
+![Figure 2: Macrophytes (Mortillaro et al., 2016)](/images/macrophyte.jpg){fig-alt="Macrophyte" id="plant1"}
 :::
 
 ::: {.g-col-6} 
-![Figure 2: Flooded forest (Amazon Waters Alliance, 2024)](/images/forest.jpeg){fig-alt="Forest" id="plant2"}
+![Figure 3: Flooded forest (Amazon Waters Alliance, 2024)](/images/forest.jpeg){fig-alt="Forest" id="plant2"}
 :::
 :::

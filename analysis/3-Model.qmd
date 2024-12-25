@@ -7,7 +7,8 @@ format:
 
 The relationship between inundation frequency (IF) and bathymetry is modelled using a boat survey conducted by a team of researchers 
 at one of the lakes within the middle-lower Amazon reach -- Curuai (Barbosa et al., 2006). The more frequently inundated parts of the 
-lake are generally observed to be deeper. 
+lake are generally observed to be deeper, hence the depth of Curuai measured from the bathymetry survey is plotted against how often 
+that part of Curuai is flooded.  
 
 ```{python}
 #| label: fig-CRIF
