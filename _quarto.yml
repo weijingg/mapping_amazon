@@ -33,7 +33,7 @@ website:
       - 2_about.qmd
       - href: 3_background.qmd
         text: The Amazon
-      - section: analysis/index.qmd
+      - section: analysis/analysis.qmd
         contents:
           - analysis/1-IF.qmd 
           - analysis/2-Wetland.qmd

@@ -28,7 +28,7 @@ which refers to how often a certain part of a floodplain is flooded. As deeper p
 flooded more frequently, the relationship between IF and depth can be modelled. This IF-depth model is based on one 
 of the floodplain lakes within the study reach called Curuai, which has been surveyed by a team of researchers, and 
 is applied to the rest of the study area. To focus on the floodplains, a mask will be created using a wetland extent 
-raster to exclude non-floodplain areas from the analysis. Specifically, **three data sources are used:** inundation frequency 
+raster to exclude non-floodplain areas from the analysis. Overall, **three data sources are used:** inundation frequency 
 (Pekel et al., 2016), wetland extent (Hess et al., 2015), and bathymetry survey at Curuai Lake (Barbosa et al., 2006).
 
 <p align="center">

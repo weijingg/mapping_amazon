@@ -5,3 +5,89 @@ format:
     code-fold: true
 ---
 
+Grouping the calculated bathymetry values by wetland cover and visualizing them as boxplots, an interesting pattern emerges. 
+Wetland cover is grouped by colour into open water (OW), macrophytes (M), shrub, woodland, and forest. Considering the overall 
+average of each group, the depth generally decreases from open water to flooded forests. 
+
+However, within the open water group and the macrophyte group, there is significant variation. 
+OW1: Open water in both low-water and high-water stage
+OW2: Non-flooded soil/ herbaceous, open water
+OW3: Non-flooded shrub, open water
+OW4: Flooded shrub, open water
+
+M1: Open water at low, macrophyte at high
+M2: Non-flooded soil/ herbaceous, macrophyte
+M3: Macrophyte, macrophyte
+
+```{python}
+#| label: fig-comparison
+#| fig-cap: "Box plot of bathymetry by wetland cover"
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import rasterio as rio
+import seaborn as sns
+
+# Import bathymetry
+bathymetry = rio.open("data/bathymetry.tif")
+bathymetry_np = bathymetry.read(1) # numpy array
+bath_values = bathymetry_np.flatten() # flatten
+
+# Import wetland extent
+wetland = rio.open("data/wetland_nearest.tif")
+wetland_np = wetland.read(1) # numpy array
+
+# Group wetland values into categories
+wetland_group = np.zeros_like(wetland_np)  # Initialize grouped array
+wetland_group[(wetland_np == 0) | (wetland_np == 1)] = 0 # Background
+wetland_group[(wetland_np == 11)] = 1 # Open water A
+wetland_group[(wetland_np == 21)] = 2 # Open water B 
+wetland_group[(wetland_np == 41)] = 3 # Open water C 
+wetland_group[(wetland_np == 51)] = 4 # Open water D
+wetland_group[(wetland_np == 13)] = 5 # Macrophyte A 
+wetland_group[(wetland_np == 23)] = 6 # Macrophyte B 
+wetland_group[(wetland_np == 33)] = 7 # Macrophyte C
+wetland_group[(wetland_np == 45)] = 8 # Shrub
+wetland_group[(wetland_np == 77)] = 9 # Woodland
+wetland_group[(wetland_np == 88) | (wetland_np == 89) | (wetland_np == 99)] = 10  # Forest
+
+# Flatten the array
+wetland_values2 = wetland_group.flatten() 
+
+# Create dataframe with bathymetry and grouped wetland values
+df2 = pd.DataFrame({'Bathymetry': bath_values, 'Wetland': wetland_values2})
+
+# Exclude rows where the wetland category is 0
+df_filtered = df2[df2['Wetland'] != 0]
+
+# Palette
+palette = ['#2559DE', '#2559DE', '#2559DE', '#2559DE', 
+           '#E432BF', '#E432BF', '#E432BF', 
+           '#A0C0FF', '#FFFF00', '#59A52F']
+
+# Labels
+labels = ['OW1', 'OW2', 'OW3', 'OW4', 'M1', 'M2', 'M3', 'Shrub', 'Woodland', 'Forest']
+
+# Box plot using seaborn
+plt.figure(figsize=(10, 6))
+sns.boxplot(x='Wetland', y='Bathymetry', data=df_filtered, palette=palette, 
+            showfliers=False,  # Turn off outliers
+            width=0.5,         # Make the boxes narrower
+            fliersize=0,       # Ensures that outliers are not shown, even if there are some left
+            linewidth=1.5,     # Adjust line width for the boxes
+            boxprops=dict(alpha=0.5))  # Set box transparency
+
+# Format graph
+plt.title("")  # Remove default title
+plt.suptitle("")
+plt.xticks(ticks=range(len(labels)), labels=labels, fontsize=10)  # Apply custom labels
+plt.xlabel("Wetland Cover")  # x-axis label
+plt.ylabel("Depth (m)")  # y-axis label
+plt.gca().set_facecolor('#F9F8F2')  # Background color
+plt.gcf().patch.set_facecolor('#F9F8F2')  # Figure background color
+plt.gca().spines['top'].set_visible(False)  # Turn off top axis line
+plt.gca().spines['right'].set_visible(False)  # Turn off right axis line
+
+plt.show()
+```

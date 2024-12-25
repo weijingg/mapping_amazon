@@ -166,7 +166,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./analysis/index.html" class="sidebar-item-text sidebar-link">
+            <a href="./analysis/analysis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Methods and Analysis</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -301,7 +301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
             <style>
-                #map_951d5c79d31b9df50e3438389b3bda55 {
+                #map_2d3cd8d1d10fc3c79a9213b6d0de3dbe {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -315,14 +315,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body>
     
     
-            <div class=&quot;folium-map&quot; id=&quot;map_951d5c79d31b9df50e3438389b3bda55&quot; ></div>
+            <div class=&quot;folium-map&quot; id=&quot;map_2d3cd8d1d10fc3c79a9213b6d0de3dbe&quot; ></div>
         
 </body>
 <script>
     
     
-            var map_951d5c79d31b9df50e3438389b3bda55 = L.map(
-                &quot;map_951d5c79d31b9df50e3438389b3bda55&quot;,
+            var map_2d3cd8d1d10fc3c79a9213b6d0de3dbe = L.map(
+                &quot;map_2d3cd8d1d10fc3c79a9213b6d0de3dbe&quot;,
                 {
                     center: [-2.7, -57.0],
                     crs: L.CRS.EPSG3857,
@@ -331,38 +331,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_951d5c79d31b9df50e3438389b3bda55);
+            L.control.scale().addTo(map_2d3cd8d1d10fc3c79a9213b6d0de3dbe);
 
             
 
         
     
-            var tile_layer_9a049497549cfa18c289bd3b370a785b = L.tileLayer(
+            var tile_layer_b03c297a9a4ce3868379cbc8e675cbcc = L.tileLayer(
                 &quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;Data by \u0026copy; \u003ca target=\&quot;_blank\&quot; href=\&quot;http://openstreetmap.org\&quot;\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\&quot;_blank\&quot; href=\&quot;http://www.openstreetmap.org/copyright\&quot;\u003eODbL\u003c/a\u003e.&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
-            ).addTo(map_951d5c79d31b9df50e3438389b3bda55);
+            ).addTo(map_2d3cd8d1d10fc3c79a9213b6d0de3dbe);
         
     
-            var tile_layer_5bb153d9b84903404e40965040a03b21 = L.tileLayer(
+            var tile_layer_ee05ec05c47863e04261849cf0f48b9e = L.tileLayer(
                 &quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&quot;,
                 {&quot;attribution&quot;: &quot;Esri&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
-            ).addTo(map_951d5c79d31b9df50e3438389b3bda55);
+            ).addTo(map_2d3cd8d1d10fc3c79a9213b6d0de3dbe);
         
     
-            var layer_control_23774330b04f8ae712c233a3bebedc78 = {
+            var layer_control_5a6b7bf01f210b9b64d714d2d82a5743 = {
                 base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_9a049497549cfa18c289bd3b370a785b,
-                    &quot;Esri Satellite&quot; : tile_layer_5bb153d9b84903404e40965040a03b21,
+                    &quot;openstreetmap&quot; : tile_layer_b03c297a9a4ce3868379cbc8e675cbcc,
+                    &quot;Esri Satellite&quot; : tile_layer_ee05ec05c47863e04261849cf0f48b9e,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_23774330b04f8ae712c233a3bebedc78.base_layers,
-                layer_control_23774330b04f8ae712c233a3bebedc78.overlays,
+                layer_control_5a6b7bf01f210b9b64d714d2d82a5743.base_layers,
+                layer_control_5a6b7bf01f210b9b64d714d2d82a5743.overlays,
                 {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: true, &quot;position&quot;: &quot;topright&quot;}
-            ).addTo(map_951d5c79d31b9df50e3438389b3bda55);
-            tile_layer_5bb153d9b84903404e40965040a03b21.remove();
+            ).addTo(map_2d3cd8d1d10fc3c79a9213b6d0de3dbe);
+            tile_layer_ee05ec05c47863e04261849cf0f48b9e.remove();
         
 </script>
 </html>" width="100%" height="300" style="border:none !important;" "allowfullscreen"="" "webkitallowfullscreen"="" "mozallowfullscreen"=""></iframe>
