@@ -5,19 +5,13 @@ format:
     code-fold: true
 ---
 
-Grouping the calculated bathymetry values by wetland cover and visualizing them as boxplots, an interesting pattern emerges. 
-Wetland cover is grouped by colour into open water (OW), macrophytes (M), shrub, woodland, and forest. Considering the overall 
-average of each group, the depth generally decreases from open water to flooded forests. 
+Grouping the bathymetry values by wetland cover and visualizing them as boxplots, an interesting pattern emerges. 
+Wetland cover is defined as open water (OW), macrophytes (M), shrub, woodland, and forest, with the colours in the boxplot 
+corresponding to the colours in the wetland extent map. 
 
-However, within the open water group and the macrophyte group, there is significant variation. 
-OW1: Open water in both low-water and high-water stage
-OW2: Non-flooded soil/ herbaceous, open water
-OW3: Non-flooded shrub, open water
-OW4: Flooded shrub, open water
-
-M1: Open water at low, macrophyte at high
-M2: Non-flooded soil/ herbaceous, macrophyte
-M3: Macrophyte, macrophyte
+Considering the overall average of each group, the depth generally decreases from open water to macrophytes and to flooded 
+forests. This is expected because the forests are found further away from the water bodies than the macrophytes, and 
+macrophytes are adapted to life in water, while the forests are only seasonally inundated. 
 
 ```{python}
 #| label: fig-comparison
@@ -64,7 +58,7 @@ df_filtered = df2[df2['Wetland'] != 0]
 # Palette
 palette = ['#2559DE', '#2559DE', '#2559DE', '#2559DE', 
            '#E432BF', '#E432BF', '#E432BF', 
-           '#A0C0FF', '#FFFF00', '#59A52F']
+           '#97EBD9', '#A0C0FF', '#59A52F']
 
 # Labels
 labels = ['OW1', 'OW2', 'OW3', 'OW4', 'M1', 'M2', 'M3', 'Shrub', 'Woodland', 'Forest']
@@ -91,3 +85,21 @@ plt.gca().spines['right'].set_visible(False)  # Turn off right axis line
 
 plt.show()
 ```
+
+Within the open water group and the macrophyte group, bathymetry values vary depending on the vegetation 
+cover of each group at low-water stage. From open water, to non-flooded herbaceous and flooded herbaceous, 
+and to non-flooded shrub and flooded shrub, the average bathymetry decreases clearly, especially for the 
+open water group. As discussed, this trend reflects the natural distribution of vegetation, with shrubs 
+typically located further from the water bodies than herbaceous plants.
+
+| Category  | Low-water stage                | High-water stage |
+| :-------- | :----------------------------- | :--------------- |
+| OW1       | Open water                     | Open water       |
+| OW2       | Non-flooded soil/ herbaceous   | Open water       |
+| OW3       | Non-flooded shrub              | Open water       |
+| OW4       | Flooded shrub                  | Open water       |
+| M1        | Open water                     | Macrophyte       |
+| M2        | Non-flooded soil/ herbaceous   | Macrophyte       |
+| M3        | Macrophyte (flooded herbaceous)| Macrophyte       |
+
+: Table 1: Types of open water and macrophyte cover

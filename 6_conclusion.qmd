@@ -1,2 +1,12 @@
 # Conclusion
 
+This project presented the bathymetry of the middle-lower Amazon's floodplain lakes, using inundation frequency (IF)
+data and an IF-depth model calibrated with a boat survey conducted at one of the lakes. The lakes range in depth from 1.8m 
+to 6.9m, and can generally be classified into shallower lakes on the alluvial plain and deeper lakes located in valleys. 
+
+A comparison of bathymetry and wetland cover data reveals a clear relationship between biodiversity and water depth, 
+offering opportunities for further ecological research using the bathymetry data. Additionally, this data has applications 
+beyond ecology, including mapping sediment distribution and modeling water circulation dynamics. 
+
+The IF-depth model methodology addresses the limitations of traditional survey and remote sensing techniques, offering a 
+versatile approach that could be applied to other rivers with sediment-rich, seasonally-inundated floodplain lakes. 

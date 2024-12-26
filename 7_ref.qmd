@@ -18,4 +18,6 @@ Mortillaro, J.M., Passarelli, C., Abril, G., Hubas, C., Albéric, P., Artigas, L
 
 Park, E., Emadzadeh, A., Alcântara, E., Yang, X., & Ho, H.L. (2020). Inferring floodplain bathymetry using inundation frequency. Journal of Environmental Management, 273, 111138. [https://doi.org/10.1016/j.jenvman.2020.111138](https://doi.org/10.1016/j.jenvman.2020.111138)
 
+Pekel, J.-F., Cottam, A., Gorelick, N., Belward, A.S., 2016. High-resolution mapping of global surface water and its long-term changes. Nature 540, 418–422. [https://doi.org/10.1038/nature20584](https://doi.org/10.1038/nature20584)
+
 Wang, Y., He, X., Bai, Y., Wang, D., Zhu, Q., Gong, F., ... & Li, T. (2022). Satellite retrieval of benthic reflectance by combining lidar and passive high-resolution imagery: Case-I water. Remote Sensing of Environment, 272, 112955. [https://doi.org/10.1016/j.rse.2022.112955](https://doi.org/10.1016/j.rse.2022.112955)

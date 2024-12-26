@@ -81,7 +81,7 @@ ax.axis("off")
 ```
 
 The vegetation cover in the middle-lower Amazon is diverse, ranging from aquatic macrophytes (herbaceous plants) 
-that grow in or near the water, to forests that are annually submerged under 10 metres of water. 
+that grow in or near the water, to forests that are annually submerged under water. 
 
 ::: {.grid}
 ::: {.g-col-6} 

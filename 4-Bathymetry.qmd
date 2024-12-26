@@ -84,7 +84,7 @@ plt.rcParams['figure.dpi'] = 300
 
 plt.show()
 ```
-![Figure 1: Bathymetry](images/bathymetry.jpg)
+![Figure 1: Bathymetry of middle-lower Amazon](images/bathymetry.jpg)
 
 Zooming into the 12 lakes of interest, they have varying depths. Most lakes lie on the alluvial plain, 
 the flat surface along the river banks formed from deposition of sediments over time. These lakes are 
